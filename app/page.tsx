@@ -3,9 +3,17 @@ import HealthForm from './components/HealthForm';
 import HealthResults from './components/HealthResults';
 import { useState } from 'react';
 
-export default function Home() {
-  const [results, setResults] = useState(null);
+export interface HealthResults {
+  name: string;
+  bmi: { value: number; interpretation: string };
+  bmr: number;
+  calorieNeeds: number;
+  recommendations: string[];
+}
 
+
+export default function Home() {
+  const [results, setResults] = useState<HealthResults | null>(null);
   return (
     <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
       <div className=" w-full bg-white shadow-lg rounded-lg p-6">
