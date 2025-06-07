@@ -216,22 +216,36 @@ export default function HealthResults({ results }: HealthResultsProps) {
 
                         {extraRecommendations.length > 0 && (
                             <div className="mt-12">
-                                <h3 className="text-lg font-semibold text-gray-800 mb-4">Additional Tips</h3>
-                                <div className="space-y-3">
-                                    {extraRecommendations.map((rec, idx) => (
-                                        <div
-                                            key={idx + 8}
-                                            className="flex items-start gap-3 bg-gray-50 p-3 rounded-lg border border-gray-100"
-                                        >
-                                            <div className="text-gray-500 font-bold">{idx + 9}.</div>
-                                            <p className="text-gray-700">
-                                                {rec.replace(/^[-•\d.]+\s*/, '')}
-                                            </p>
-                                        </div>
-                                    ))}
-                                </div>
+                                {extraRecommendations.map((rec, idx) => (
+                                    <div key={idx} className={idx === 0 ? "mb-8" : ""}>
+                                        {idx === 0 ? (
+                                            // Heading for extra recommendations (like second column heading)
+                                            <div className="flex justify-center pb-4 border-b-2 border-emerald-100">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center">
+                                                        <span className="text-white font-bold text-lg">3</span>
+                                                    </div>
+                                                    <h3 className="text-xl font-bold text-gray-800 text-center">
+                                                        {rec.replace(/^[-•\d.]+\s*/, '').replace(/\*+/g, '')}
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            // Regular extra recommendations styled like second column items
+                                            <div className="flex items-start gap-4 group hover:bg-gray-50 rounded-lg p-3 transition-colors">
+                                                <div className="w-6 h-6 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                                                    {idx}
+                                                </div>
+                                                <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
+                                                    {rec.replace(/^[-•\d.]+\s*/, '')}
+                                                </p>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
                             </div>
                         )}
+
 
                         <div className="mt-8 pt-6 border-t border-gray-100">
                             <div className="flex items-center justify-center text-sm text-gray-500">
