@@ -16,8 +16,13 @@ export interface HealthPayload {
 export async function callGemini(payload: HealthPayload): Promise<string> {
   const prompt = `
 You are a health expert. Based on the following information, generate personalized health recommendations in bullet points.
-Include fitness, diet with 3 points each.
-Be concise and no need to give extra information just some recommendation
+Include 3 points on fitness,
+Include 3 points on diet
+Be concise and no need to give extra information just some recommendation.
+
+${payload.healthConditions ? `\nHealth Conditions: ${payload.healthConditions}\nAdd a few extra points on how to manage or improve these conditions.` : ''}
+Return only the bullet points, no explanation.
+
 
 Age: ${payload.age}
 Gender: ${payload.gender}
@@ -27,10 +32,7 @@ BMI: ${payload.bmi.value.toFixed(1)} (${payload.bmi.interpretation})
 BMR: ${payload.bmr.toFixed(0)} kcal/day
 Calorie Needs: ${payload.calorieNeeds.toFixed(0)} kcal/day
 Activity Level: ${payload.activityLevel}
-
-${payload.healthConditions ? `\nHealth Conditions: ${payload.healthConditions}\nAdd a few extra points on how to manage or improve these conditions.` : ''}
-Return only the bullet points, no explanation.
-`.trim();
+`
 
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
