@@ -20,12 +20,25 @@ const schema = z.object({
     healthConditions: z.string().optional(),
 });
 
+interface HealthResults {
+    name: string;
+    bmi: {
+        value: number;
+        interpretation: string;
+    };
+    bmr: number;
+    calorieNeeds: number;
+    recommendations: string[];
+}
+
+
 type FormData = z.infer<typeof schema>;
 
 interface HealthFormProps {
-    setResults: (results: any) => void;
-    results: any;
+    setResults: React.Dispatch<React.SetStateAction<HealthResults | null>>;
+    results: HealthResults | null;
 }
+
 
 export default function HealthForm({ setResults, results }: HealthFormProps) {
     const {
@@ -50,6 +63,7 @@ export default function HealthForm({ setResults, results }: HealthFormProps) {
     const [loading, setLoading] = useState(false);
     const [timer, setTimer] = useState(0);
 
+
     const watchedActivityLevel = watch('activityLevel');
 
     useEffect(() => {
@@ -73,7 +87,7 @@ export default function HealthForm({ setResults, results }: HealthFormProps) {
     }, [reset, setValue]);
 
     const onSubmit: SubmitHandler<FormData> = useCallback(
-        async (data, event) => {
+        async (data: FormData, event?: React.BaseSyntheticEvent) => {
             event?.preventDefault(); // Prevent default form submission
             if (loading) return;
             console.log('onSubmit called'); // Debug log

@@ -60,7 +60,6 @@ export default function HealthResults({ results }: HealthResultsProps) {
                 if (!Array.isArray(data.recommendations)) {
                     throw new Error("Invalid recommendations format");
                 }
-
                 setRecommendations(data.recommendations);
             } catch (error) {
                 console.error("Error fetching recommendations:", error);
