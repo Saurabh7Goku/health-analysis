@@ -30,8 +30,8 @@ A modern web application built with **Next.js**, **React**, and **Tailwind CSS**
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/health-analysis-app.git
-   cd health-analysis-app
+   git clone https://github.com/Saurabh7Goku/health-analysis.git
+   cd health-analysis
    ```
 
 2. **Install Dependencies**:
