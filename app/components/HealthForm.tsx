@@ -23,7 +23,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 
-export default function HealthForm({ setResults, results }: HealthFormProps) {
+export default function HealthForm({ setResults }: HealthFormProps) {
     const {
         register,
         handleSubmit,
