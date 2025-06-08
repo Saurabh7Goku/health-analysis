@@ -4,9 +4,9 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useEffect, useCallback } from 'react';
-import { jsPDF } from 'jspdf';
 import { User, Calendar, Activity, Ruler, Weight, Heart, FileText, Calculator } from 'lucide-react';
 import { useState } from 'react';
+import { HealthResults, HealthFormProps } from '../api/types';
 
 const schema = z.object({
     name: z.string().min(1, 'Name is required'),
@@ -20,23 +20,8 @@ const schema = z.object({
     healthConditions: z.string().optional(),
 });
 
-interface HealthResults {
-    name: string;
-    bmi: {
-        value: number;
-        interpretation: string;
-    };
-    bmr: number;
-    calorieNeeds: number;
-    recommendations: string[];
-}
-
 type FormData = z.infer<typeof schema>;
 
-interface HealthFormProps {
-    setResults: React.Dispatch<React.SetStateAction<HealthResults | null>>;
-    results: HealthResults | null;
-}
 
 export default function HealthForm({ setResults, results }: HealthFormProps) {
     const {
@@ -117,6 +102,9 @@ export default function HealthForm({ setResults, results }: HealthFormProps) {
                 // Create the complete results object with recommendations
                 const completeResults: HealthResults = {
                     name: result.name,
+                    weight: result.weight,
+                    height: result.height,
+                    gender: result.gender,
                     bmi: result.bmi,
                     bmr: result.bmr,
                     calorieNeeds: result.calorieNeeds,

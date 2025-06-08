@@ -16,6 +16,9 @@ import {
 interface HealthResultsProps {
     results: {
         name: string;
+        weight: number;
+        height: number;
+        gender: string;
         bmi: { value: number; interpretation: string };
         bmr: number;
         calorieNeeds: number;
@@ -71,7 +74,7 @@ export default function HealthResults({ results }: HealthResultsProps) {
             const contentWidth = pdfWidth - 2 * margin;
 
             // Header Section
-            pdf.setFillColor(248, 250, 252); // Light blue-gray background
+            pdf.setFillColor(219, 234, 254);
             pdf.rect(0, 0, pdfWidth, 80, "F");
 
             // Main heading
@@ -101,8 +104,14 @@ export default function HealthResults({ results }: HealthResultsProps) {
             pdf.setTextColor(55, 65, 81); // Gray-700
             pdf.text(`Name: ${results.name}`, margin, yPosition);
 
-            yPosition += 40;
+            const rightColumnX = margin + 200;
+            pdf.text(`Height: ${results.height} cm`, rightColumnX + 200, yPosition);
 
+            yPosition += 20
+            pdf.text(`Gender: ${results.gender}`, margin, yPosition);
+            pdf.text(`Weight: ${results.weight} kg`, rightColumnX + 200, yPosition);
+
+            yPosition += 40;
             // Health Metrics Row
             pdf.setFont("helvetica", "bold");
             pdf.setFontSize(16);
@@ -179,14 +188,17 @@ export default function HealthResults({ results }: HealthResultsProps) {
                 yPosition = 50;
             }
 
-            // Recommendations Section
+            const title = "Health Analysis & Recommendations";
+            const pageWidth = pdf.internal.pageSize.getWidth();
+            const textWidth = pdf.getTextWidth(title);
+            const centerX = (pageWidth - textWidth) / 3;
+
             pdf.setFont("helvetica", "bold");
             pdf.setFontSize(18);
             pdf.setTextColor(17, 24, 39);
-            pdf.text("Health Analysis & Recommendations", margin, yPosition);
+            pdf.text(title, centerX, yPosition);
 
             yPosition += 30;
-
             // Function to add recommendation section
             const addRecommendationSection = (recs: string[], sectionTitle: string, iconColor: { bg: number[]; text: number[]; bullet: number[] }) => {
                 if (recs.length === 0) return;

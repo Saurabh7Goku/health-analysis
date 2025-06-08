@@ -4,8 +4,12 @@ import HealthResults from './components/HealthResults';
 import { useState, useEffect } from 'react';
 import { Heart, Stethoscope, Activity, Shield, Users, TrendingUp, AlertTriangle, FileText } from 'lucide-react';
 
+
 export interface HealthResults {
   name: string;
+  weight: number;
+  height: number;
+  gender: string;
   bmi: { value: number; interpretation: string };
   bmr: number;
   calorieNeeds: number;
