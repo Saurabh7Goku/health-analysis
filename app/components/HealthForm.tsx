@@ -146,8 +146,8 @@ export default function HealthForm({ setResults }: HealthFormProps) {
             {/* <div className="w-full max-w-screen-xl mx-auto"> */}
             {/* Form Card */}
             <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-                <div className="bg-gradient-to-r from-blue-600 to-green-600 p-5 sm:p-6">
-                    <h2 className="text-xl font-semibold text-white flex items-center gap-2">
+                <div className="flex flex-center bg-gradient-to-r from-blue-600 to-green-600 p-5 sm:p-6">
+                    <h2 className="text-xl font-semibold text-white flex items-center gap-2 text-center">
                         <FileText size={20} />
                         Personal Information
                     </h2>
