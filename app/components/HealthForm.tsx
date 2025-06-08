@@ -171,7 +171,7 @@ export default function HealthForm({ setResults, results }: HealthFormProps) {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 p-4 sm:p-6 lg:p-8 font-sans">
+        <div className="w-full min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 p-4 sm:p-6 lg:p-8 font-sans">
             <div className="w-full max-w-screen-xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-8 lg:mb-12">
@@ -355,7 +355,7 @@ export default function HealthForm({ setResults, results }: HealthFormProps) {
                                     <button
                                         type="submit"
                                         disabled={loading}
-                                        className={`w-full sm:w-1/2 lg:w-1/4 p-4 rounded-xl font-semibold text-lg border-none cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 shadow-lg transform
+                                        className={`w-full sm:w-1/2 sm:text-sm lg:w-1/2 xl:w-1/3 md:w-1/2 p-4 rounded-xl font-semibold text-lg border-none cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 shadow-lg transform
                                             ${loading
                                                 ? 'bg-gray-400 cursor-not-allowed'
                                                 : 'bg-gradient-to-r from-blue-600 to-green-600 text-white hover:scale-105 hover:shadow-xl active:scale-95'
@@ -402,7 +402,7 @@ export default function HealthForm({ setResults, results }: HealthFormProps) {
                                         reset();
                                         setResults(null);
                                     }}
-                                    className="w-full sm:w-1/2 lg:w-1/4 bg-gradient-to-r from-blue-600 to-green-600 text-white p-2 sm:p-3 lg:p-4 rounded-xl font-semibold text-sm sm:text-base lg:text-lg border-none cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 shadow-lg hover:scale-105 hover:shadow-xl transform active:scale-95"
+                                    className="w-full xs:w-1/2 sm:w-1/2 lg:w-1/4 md:w-1/3 bg-gradient-to-r from-blue-600 to-green-600 text-white p-2 sm:p-3 lg:p-4 rounded-xl font-semibold text-sm sm:text-base lg:text-lg border-none cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 shadow-lg hover:scale-105 hover:shadow-xl transform active:scale-95"
                                 >
                                     Clear Form & Reset
                                 </button>
