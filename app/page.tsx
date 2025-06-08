@@ -34,6 +34,7 @@ export default function Home() {
 
   const goToForm = () => {
     setShowForm(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const backToHome = () => {
