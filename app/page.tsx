@@ -56,40 +56,54 @@ export default function Home() {
 
         {/* Header Section */}
         <div className="relative z-10 pt-8 pb-4 flex-shrink-0">
-          <div className="w-full px-6 flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full flex items-center justify-center">
-                <Heart className="text-white w-6 h-6" />
-              </div>
+          <div className="w-full px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+            {/* Heading Section */}
+            <div className="flex items-start sm:items-center gap-4">
               <div>
                 <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600">
                   Health Assessment Form
                 </h1>
-                <p className="text-sm text-gray-600">Complete your health profile for personalized insights</p>
+                <p className="text-sm text-gray-600">
+                  Complete your health profile for personalized insights
+                </p>
               </div>
             </div>
 
-            <button
-              onClick={backToHome}
-              className="px-4 py-2 bg-white/90 hover:bg-white backdrop-blur-sm text-gray-700 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 flex items-center gap-2 border border-gray-200"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              Back to Home
-            </button>
+            {/* Button Section */}
+            <div className="flex xs:justify-end">
+              <button
+                onClick={backToHome}
+                className="xs:w-1/4 px-4 py-2 bg-white/90 hover:bg-white backdrop-blur-sm text-gray-700 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 flex items-center gap-2 border border-gray-200"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Home
+              </button>
+            </div>
+
+          </div>
+          {/* Header */}
+          <div className="text-center mb-8 lg:mb-12 my-10">
+            <h1 className="text-3xl xs:text-base sm:text-2xl lg:text-5xl font-bold text-gray-900 mb-2">
+              Health Assessment
+            </h1>
+            <p className="text-gray-600 text-base sm:text-lg lg:text-xl">
+              Get personalized health insights and recommendations
+            </p>
           </div>
         </div>
 
+
         {/* Form Content */}
-        <div className="relative z-10 p-6 flex-1">
-          <div className="w-full max-w-none mx-auto h-full">
+        <div className="w-full relative flex-1">
+          <div className="w-full max-w-none mx-auto h-full px-4 sm:px-0">
             <div className="bg-white/90 backdrop-blur-lg shadow-2xl rounded-3xl p-8 border border-white/30 h-full">
               <HealthForm setResults={setResults} results={results} />
             </div>
           </div>
         </div>
-
         {/* Results Modal */}
         {results && isModalOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center">

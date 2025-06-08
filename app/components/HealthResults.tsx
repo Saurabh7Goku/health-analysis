@@ -1,8 +1,7 @@
 'use client';
 
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
 import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
 import {
     Heart,
     Activity,
@@ -25,7 +24,7 @@ interface HealthResultsProps {
     onClose?: () => void;
 }
 
-export default function HealthResults({ results, onClose }: HealthResultsProps) {
+export default function HealthResults({ results }: HealthResultsProps) {
     const getBMIColor = (bmi: number) => {
         if (bmi < 18.5) return 'text-blue-600';
         if (bmi < 25) return 'text-green-600';
@@ -278,7 +277,7 @@ export default function HealthResults({ results, onClose }: HealthResultsProps) 
             pdf.setFontSize(8);
             pdf.setTextColor(107, 114, 128);
             pdf.text("This report is generated for informational purposes only. Please consult with a healthcare professional.", margin, footerY);
-            pdf.text(`Generated on ${new Date().toLocaleDateString()} | Confidential Document`, pdfWidth - margin, footerY, { align: 'right' });
+            pdf.text(`| Confidential Document`, pdfWidth - margin, footerY, { align: 'right' });
 
             // Download the PDF
             const filename = `health-report-${(results.name || 'patient').replace(/\s+/g, '_').toLowerCase()}-${new Date().toISOString().split('T')[0]}.pdf`;

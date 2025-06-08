@@ -171,263 +171,253 @@ export default function HealthForm({ setResults, results }: HealthFormProps) {
     ];
 
     return (
-        <div className="w-full min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 p-4 sm:p-6 lg:p-8 font-sans">
-            <div className="w-full max-w-screen-xl mx-auto">
-                {/* Header */}
-                <div className="text-center mb-8 lg:mb-12">
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
-                        Health Assessment
-                    </h1>
-                    <p className="text-gray-600 text-base sm:text-lg lg:text-xl">
-                        Get personalized health insights and recommendations
-                    </p>
+        <div className="w-full min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 md:p-6 lg:p-8 font-sans">
+            {/* <div className="w-full max-w-screen-xl mx-auto"> */}
+            {/* Form Card */}
+            <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+                <div className="bg-gradient-to-r from-blue-600 to-green-600 p-5 sm:p-6">
+                    <h2 className="text-xl font-semibold text-white flex items-center gap-2">
+                        <FileText size={20} />
+                        Personal Information
+                    </h2>
                 </div>
 
-                {/* Form Card */}
-                <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-                    <div className="bg-gradient-to-r from-blue-600 to-green-600 p-5 sm:p-6">
-                        <h2 className="text-xl font-semibold text-white flex items-center gap-2">
-                            <FileText size={20} />
-                            Personal Information
-                        </h2>
-                    </div>
-
-                    <div className="p-6 sm:p-8 lg:p-12">
-                        <form onSubmit={handleSubmit(onSubmit)}>
-                            {/* Row 1: Basic Info */}
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-                                <div className="flex flex-col gap-2">
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700">
-                                        <User size={16} className="text-blue-600" />
-                                        Full Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        {...register('name')}
-                                        className="w-full p-3 sm:p-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 transition-all duration-200 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-3 focus:ring-blue-100"
-                                        placeholder="Enter your full name"
-                                    />
-                                    {errors.name && (
-                                        <p className="text-red-500 text-sm flex items-center gap-1">
-                                            <span>⚠</span>
-                                            {errors.name.message}
-                                        </p>
-                                    )}
-                                </div>
-
-                                <div className="flex flex-col gap-2">
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700">
-                                        <Calendar size={16} className="text-blue-600" />
-                                        Age
-                                    </label>
-                                    <input
-                                        type="number"
-                                        {...register('age', { valueAsNumber: true })}
-                                        className="w-full p-3 sm:p-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 transition-all duration-200 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-3 focus:ring-blue-100"
-                                        placeholder="Your age in years"
-                                    />
-                                    {errors.age && (
-                                        <p className="text-red-500 text-sm flex items-center gap-1">
-                                            <span>⚠</span>
-                                            {errors.age.message}
-                                        </p>
-                                    )}
-                                </div>
-                            </div>
-
-                            {/* Row 2: Physical Measurements */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
-                                <div className="flex flex-col gap-2">
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700">
-                                        <User size={16} className="text-green-600" />
-                                        Gender
-                                    </label>
-                                    <select
-                                        {...register('gender')}
-                                        className="w-full p-3 sm:p-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 transition-all duration-200 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-3 focus:ring-blue-100"
-                                    >
-                                        <option value="">Select Gender</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                    </select>
-                                    {errors.gender && (
-                                        <p className="text-red-500 text-sm flex items-center gap-1">
-                                            <span>⚠</span>
-                                            {errors.gender.message}
-                                        </p>
-                                    )}
-                                </div>
-
-                                <div className="flex flex-col gap-2">
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700">
-                                        <Ruler size={16} className="text-green-600" />
-                                        Height (cm)
-                                    </label>
-                                    <input
-                                        type="number"
-                                        {...register('height', { valueAsNumber: true })}
-                                        className="w-full p-3 sm:p-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 transition-all duration-200 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-3 focus:ring-blue-100"
-                                        placeholder="170"
-                                    />
-                                    {errors.height && (
-                                        <p className="text-red-500 text-sm flex items-center gap-1">
-                                            <span>⚠</span>
-                                            {errors.height.message}
-                                        </p>
-                                    )}
-                                </div>
-
-                                <div className="flex flex-col gap-2 md:col-span-2 xl:col-span-1">
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700">
-                                        <Weight size={16} className="text-green-600" />
-                                        Weight (kg)
-                                    </label>
-                                    <input
-                                        type="number"
-                                        {...register('weight', { valueAsNumber: true })}
-                                        className="w-full p-3 sm:p-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 transition-all duration-200 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-3 focus:ring-blue-100"
-                                        placeholder="70"
-                                    />
-                                    {errors.weight && (
-                                        <p className="text-red-500 text-sm flex items-center gap-1">
-                                            <span>⚠</span>
-                                            {errors.weight.message}
-                                        </p>
-                                    )}
-                                </div>
-                            </div>
-
-                            {/* Row 3: Activity Level */}
-                            <div className="mb-8">
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-3">
-                                    <Activity size={16} className="text-purple-600" />
-                                    Physical Activity Level
+                <div className="p-6 sm:p-8 lg:p-12">
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        {/* Row 1: Basic Info */}
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                            <div className="flex flex-col gap-2">
+                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                                    <User size={16} className="text-blue-600" />
+                                    Full Name
                                 </label>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-                                    {activityLevels.map((activity) => (
-                                        <label key={activity.value} className="relative cursor-pointer">
-                                            <input
-                                                type="radio"
-                                                {...register('activityLevel')}
-                                                value={activity.value}
-                                                className="absolute opacity-0 pointer-events-none"
-                                            />
-                                            <div
-                                                className={`p-4 border-2 rounded-xl transition-all duration-200 ${watchedActivityLevel === activity.value
-                                                    ? 'border-purple-600 bg-purple-50'
-                                                    : 'border-gray-200 bg-white hover:border-purple-300 hover:bg-purple-25'
-                                                    }`}
-                                            >
-                                                <div className="font-semibold text-gray-900 mb-1">
-                                                    {activity.label}
-                                                </div>
-                                                <div className="text-sm text-gray-600">
-                                                    {activity.desc}
-                                                </div>
-                                            </div>
-                                        </label>
-                                    ))}
-                                </div>
-                                {errors.activityLevel && (
-                                    <p className="text-red-500 text-sm flex items-center gap-1 mt-2">
+                                <input
+                                    type="text"
+                                    {...register('name')}
+                                    className="w-full p-3 sm:p-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 transition-all duration-200 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-3 focus:ring-blue-100"
+                                    placeholder="Enter your full name"
+                                />
+                                {errors.name && (
+                                    <p className="text-red-500 text-sm flex items-center gap-1">
                                         <span>⚠</span>
-                                        {errors.activityLevel.message}
+                                        {errors.name.message}
                                     </p>
                                 )}
                             </div>
 
-                            {/* Row 4: Health Conditions */}
-                            <div className="mb-8">
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-3">
-                                    <Heart size={16} className="text-red-500" />
-                                    Known Health Conditions (Optional)
+                            <div className="flex flex-col gap-2">
+                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                                    <Calendar size={16} className="text-blue-600" />
+                                    Age
                                 </label>
-                                <textarea
-                                    {...register('healthConditions')}
-                                    className="w-full p-3 sm:p-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 transition-all duration-200 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-3 focus:ring-blue-100 min-h-[100px] resize-y font-sans"
-                                    placeholder="Please list any known health conditions, allergies, or medications you're currently taking..."
+                                <input
+                                    type="number"
+                                    {...register('age', { valueAsNumber: true })}
+                                    className="w-full p-3 sm:p-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 transition-all duration-200 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-3 focus:ring-blue-100"
+                                    placeholder="Your age in years"
                                 />
-                            </div>
-
-                            {/* Action Buttons */}
-                            <div className="space-y-4">
-                                <div className="flex justify-center">
-                                    <button
-                                        type="submit"
-                                        disabled={loading}
-                                        className={`w-full sm:w-1/2 sm:text-sm lg:w-1/2 xl:w-1/3 md:w-1/2 p-4 rounded-xl font-semibold text-lg border-none cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 shadow-lg transform
-                                            ${loading
-                                                ? 'bg-gray-400 cursor-not-allowed'
-                                                : 'bg-gradient-to-r from-blue-600 to-green-600 text-white hover:scale-105 hover:shadow-xl active:scale-95'
-                                            }`}
-                                    >
-                                        {loading ? (
-                                            <>
-                                                <svg
-                                                    className="animate-spin h-5 w-5 text-white"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                >
-                                                    <circle
-                                                        className="opacity-25"
-                                                        cx="12"
-                                                        cy="12"
-                                                        r="10"
-                                                        stroke="currentColor"
-                                                        strokeWidth="4"
-                                                    ></circle>
-                                                    <path
-                                                        className="opacity-75"
-                                                        fill="currentColor"
-                                                        d="M4 12a8 8 0 018-8v8z"
-                                                    ></path>
-                                                </svg>
-                                                Processing... {timer}s
-                                            </>
-                                        ) : (
-                                            <>
-                                                <Calculator size={20} />
-                                                Calculate Health Metrics
-                                            </>
-                                        )}
-                                    </button>
-                                </div>
-
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        localStorage.removeItem('formData');
-                                        localStorage.removeItem('healthResults');
-                                        reset();
-                                        setResults(null);
-                                    }}
-                                    className="w-full xs:w-1/2 sm:w-1/2 lg:w-1/4 md:w-1/3 bg-gradient-to-r from-blue-600 to-green-600 text-white p-2 sm:p-3 lg:p-4 rounded-xl font-semibold text-sm sm:text-base lg:text-lg border-none cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 shadow-lg hover:scale-105 hover:shadow-xl transform active:scale-95"
-                                >
-                                    Clear Form & Reset
-                                </button>
-                                {results && (
-                                    <button
-                                        type="button"
-                                        onClick={downloadPDF}
-                                        className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-4 rounded-xl font-semibold text-lg border-none cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 shadow-lg hover:scale-105 hover:shadow-xl transform active:scale-95"
-                                    >
-                                        <Download size={20} />
-                                        Download Health Report
-                                    </button>
+                                {errors.age && (
+                                    <p className="text-red-500 text-sm flex items-center gap-1">
+                                        <span>⚠</span>
+                                        {errors.age.message}
+                                    </p>
                                 )}
                             </div>
-                        </form>
-                    </div>
-                </div>
+                        </div>
 
-                {/* Footer */}
-                <div className="text-center mt-8 text-gray-600">
-                    <p className="text-sm">
-                        Your health data is processed securely and stored locally on your device.
-                    </p>
+                        {/* Row 2: Physical Measurements */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
+                            <div className="flex flex-col gap-2">
+                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                                    <User size={16} className="text-green-600" />
+                                    Gender
+                                </label>
+                                <select
+                                    {...register('gender')}
+                                    className="w-full p-3 sm:p-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 transition-all duration-200 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-3 focus:ring-blue-100"
+                                >
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                {errors.gender && (
+                                    <p className="text-red-500 text-sm flex items-center gap-1">
+                                        <span>⚠</span>
+                                        {errors.gender.message}
+                                    </p>
+                                )}
+                            </div>
+
+                            <div className="flex flex-col gap-2">
+                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                                    <Ruler size={16} className="text-green-600" />
+                                    Height (cm)
+                                </label>
+                                <input
+                                    type="number"
+                                    {...register('height', { valueAsNumber: true })}
+                                    className="w-full p-3 sm:p-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 transition-all duration-200 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-3 focus:ring-blue-100"
+                                    placeholder="170"
+                                />
+                                {errors.height && (
+                                    <p className="text-red-500 text-sm flex items-center gap-1">
+                                        <span>⚠</span>
+                                        {errors.height.message}
+                                    </p>
+                                )}
+                            </div>
+
+                            <div className="flex flex-col gap-2 md:col-span-2 xl:col-span-1">
+                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                                    <Weight size={16} className="text-green-600" />
+                                    Weight (kg)
+                                </label>
+                                <input
+                                    type="number"
+                                    {...register('weight', { valueAsNumber: true })}
+                                    className="w-full p-3 sm:p-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 transition-all duration-200 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-3 focus:ring-blue-100"
+                                    placeholder="70"
+                                />
+                                {errors.weight && (
+                                    <p className="text-red-500 text-sm flex items-center gap-1">
+                                        <span>⚠</span>
+                                        {errors.weight.message}
+                                    </p>
+                                )}
+                            </div>
+                        </div>
+
+                        {/* Row 3: Activity Level */}
+                        <div className="mb-8">
+                            <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-3">
+                                <Activity size={16} className="text-purple-600" />
+                                Physical Activity Level
+                            </label>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+                                {activityLevels.map((activity) => (
+                                    <label key={activity.value} className="relative cursor-pointer">
+                                        <input
+                                            type="radio"
+                                            {...register('activityLevel')}
+                                            value={activity.value}
+                                            className="absolute opacity-0 pointer-events-none"
+                                        />
+                                        <div
+                                            className={`p-4 border-2 rounded-xl transition-all duration-200 ${watchedActivityLevel === activity.value
+                                                ? 'border-purple-600 bg-purple-50'
+                                                : 'border-gray-200 bg-white hover:border-purple-300 hover:bg-purple-25'
+                                                }`}
+                                        >
+                                            <div className="font-semibold text-gray-900 mb-1">
+                                                {activity.label}
+                                            </div>
+                                            <div className="text-sm text-gray-600">
+                                                {activity.desc}
+                                            </div>
+                                        </div>
+                                    </label>
+                                ))}
+                            </div>
+                            {errors.activityLevel && (
+                                <p className="text-red-500 text-sm flex items-center gap-1 mt-2">
+                                    <span>⚠</span>
+                                    {errors.activityLevel.message}
+                                </p>
+                            )}
+                        </div>
+
+                        {/* Row 4: Health Conditions */}
+                        <div className="mb-8">
+                            <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-3">
+                                <Heart size={16} className="text-red-500" />
+                                Known Health Conditions (Optional)
+                            </label>
+                            <textarea
+                                {...register('healthConditions')}
+                                className="w-full p-3 sm:p-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 transition-all duration-200 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-3 focus:ring-blue-100 min-h-[100px] resize-y font-sans"
+                                placeholder="Please list any known health conditions, allergies, or medications you're currently taking..."
+                            />
+                        </div>
+
+                        {/* Action Buttons */}
+                        <div className="space-y-4">
+                            <div className="flex justify-center">
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className={`w-full sm:w-1/2 sm:text-sm lg:w-1/2 xl:w-1/3 md:w-1/2 p-4 rounded-xl font-semibold text-lg border-none cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 shadow-lg transform
+                                            ${loading
+                                            ? 'bg-gray-400 cursor-not-allowed'
+                                            : 'bg-gradient-to-r from-blue-600 to-green-600 text-white hover:scale-105 hover:shadow-xl active:scale-95'
+                                        }`}
+                                >
+                                    {loading ? (
+                                        <>
+                                            <svg
+                                                className="animate-spin h-5 w-5 text-white"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <circle
+                                                    className="opacity-25"
+                                                    cx="12"
+                                                    cy="12"
+                                                    r="10"
+                                                    stroke="currentColor"
+                                                    strokeWidth="4"
+                                                ></circle>
+                                                <path
+                                                    className="opacity-75"
+                                                    fill="currentColor"
+                                                    d="M4 12a8 8 0 018-8v8z"
+                                                ></path>
+                                            </svg>
+                                            Processing... {timer}s
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Calculator size={20} />
+                                            Calculate Health Metrics
+                                        </>
+                                    )}
+                                </button>
+                            </div>
+
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    localStorage.removeItem('formData');
+                                    localStorage.removeItem('healthResults');
+                                    reset();
+                                    setResults(null);
+                                }}
+                                className="w-full xs:w-1/2 sm:w-1/2 lg:w-1/4 md:w-1/3 bg-gradient-to-r from-blue-600 to-green-600 text-white p-2 sm:p-3 lg:p-4 rounded-xl font-semibold text-sm sm:text-base lg:text-lg border-none cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 shadow-lg hover:scale-105 hover:shadow-xl transform active:scale-95"
+                            >
+                                Clear Form & Reset
+                            </button>
+                            {results && (
+                                <button
+                                    type="button"
+                                    onClick={downloadPDF}
+                                    className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-4 rounded-xl font-semibold text-lg border-none cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 shadow-lg hover:scale-105 hover:shadow-xl transform active:scale-95"
+                                >
+                                    <Download size={20} />
+                                    Download Health Report
+                                </button>
+                            )}
+                        </div>
+                    </form>
                 </div>
             </div>
+
+            {/* Footer */}
+            <div className="text-center mt-8 text-gray-600">
+                <p className="text-sm">
+                    Your health data is processed securely and stored locally on your device.
+                </p>
+            </div>
+            {/* </div> */}
         </div>
     );
 }
