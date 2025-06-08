@@ -169,9 +169,6 @@ export default function Home() {
       {/* Header Section */}
       <div className="relative z-10 pt-8 pb-4">
         <div className="text-center">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500 shadow-2xl mb-6">
-            <Heart className="text-white w-10 h-10 animate-pulse" />
-          </div>
           <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 mb-4">
             Health Assessment Center
           </h1>
