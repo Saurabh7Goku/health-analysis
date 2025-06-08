@@ -41,11 +41,8 @@ export async function POST(request: Request) {
         calorieNeeds,
         healthConditions,
     };
-    console.log("Received payload:", payload.healthConditions);
-
 
     const text = await callGemini(payload);
-
     const recommendations = text
         .split('\n')
         .filter(line =>
@@ -57,6 +54,9 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
         name,
+        gender,
+        height,
+        weight,
         bmi: { value: bmi, interpretation: bmiInterpretation },
         bmr,
         calorieNeeds,

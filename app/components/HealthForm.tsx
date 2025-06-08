@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useEffect, useCallback } from 'react';
 import { jsPDF } from 'jspdf';
-import { User, Calendar, Activity, Ruler, Weight, Heart, FileText, Download, Calculator } from 'lucide-react';
+import { User, Calendar, Activity, Ruler, Weight, Heart, FileText, Calculator } from 'lucide-react';
 import { useState } from 'react';
 
 const schema = z.object({
@@ -145,23 +145,6 @@ export default function HealthForm({ setResults, results }: HealthFormProps) {
         },
         [loading, reset, setResults]
     );
-
-    const downloadPDF = useCallback(() => {
-        if (!results) return;
-        const doc = new jsPDF();
-        doc.setFontSize(16);
-        doc.text('Health Analysis Report', 20, 20);
-        doc.setFontSize(12);
-        doc.text(`Name: ${results.name}`, 20, 30);
-        doc.text(`BMI: ${results.bmi.value} (${results.bmi.interpretation})`, 20, 40);
-        doc.text(`BMR: ${results.bmr} kcal/day`, 20, 50);
-        doc.text(`Daily Calorie Needs: ${results.calorieNeeds} kcal/day`, 20, 60);
-        doc.text('Recommendations:', 20, 70);
-        results.recommendations.forEach((rec: string, index: number) => {
-            doc.text(`- ${rec}`, 20, 80 + index * 10);
-        });
-        doc.save('health-analysis.pdf');
-    }, [results]);
 
     const activityLevels = [
         { value: 'sedentary', label: 'Sedentary', desc: 'Little to no exercise' },
@@ -396,16 +379,6 @@ export default function HealthForm({ setResults, results }: HealthFormProps) {
                             >
                                 Clear Form & Reset
                             </button>
-                            {results && (
-                                <button
-                                    type="button"
-                                    onClick={downloadPDF}
-                                    className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-4 rounded-xl font-semibold text-lg border-none cursor-pointer flex items-center justify-center gap-2 transition-all duration-200 shadow-lg hover:scale-105 hover:shadow-xl transform active:scale-95"
-                                >
-                                    <Download size={20} />
-                                    Download Health Report
-                                </button>
-                            )}
                         </div>
                     </form>
                 </div>
