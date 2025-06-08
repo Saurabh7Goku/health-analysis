@@ -66,9 +66,9 @@ async function callGemini(payload) {
 You are a health expert. Based on the following information, generate personalized health recommendations in bullet points.
 Include 3 points on fitness,
 Include 3 points on diet
-Include 3 points on how to impove given Health Condition: ${payload.healthConditions ? payload.healthConditions : "None"}
+Include a brief few points on how to impove given ${payload.healthConditions ? `Health Conditions: ${payload.healthConditions}` : ''}
 
-Return response only for the provided information in the bullet points, no explanation.
+Return response only for the provided information 
 Be concise and no need to give extra information just some recommendation.
 
 Age: ${payload.age}
@@ -107,6 +107,7 @@ Activity Level: ${payload.activityLevel}
             }
         })
     });
+    console.log("callGemini → healthConditions:", payload.healthConditions);
     const data = await res.json();
     return data?.candidates?.[0]?.content?.parts?.[0]?.text || "• Unable to generate recommendations.";
 }
@@ -160,10 +161,9 @@ async function POST(request) {
         },
         bmr,
         calorieNeeds,
-        ...healthConditions && {
-            healthConditions
-        }
+        healthConditions
     };
+    console.log("Received payload:", payload.healthConditions);
     const text = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$gemini$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["callGemini"])(payload);
     const recommendations = text.split('\n').filter((line)=>line.trim().startsWith('•') || line.trim().startsWith('-') || line.trim().startsWith('*')).map((line)=>line.replace(/^[-•*]\s*/, '').trim());
     return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({

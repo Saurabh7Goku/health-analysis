@@ -39,8 +39,10 @@ export async function POST(request: Request) {
         bmi: { value: bmi, interpretation: bmiInterpretation },
         bmr,
         calorieNeeds,
-        ...(healthConditions && { healthConditions }),
+        healthConditions,
     };
+    console.log("Received payload:", payload.healthConditions);
+
 
     const text = await callGemini(payload);
 

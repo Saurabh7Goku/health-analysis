@@ -4,13 +4,13 @@ export interface HealthPayload {
   height: number;
   weight: number;
   activityLevel: string;
-  healthConditions?: string;
   bmi: {
     value: number;
     interpretation: string;
   };
   bmr: number;
   calorieNeeds: number;
+  healthConditions?: string;
 }
 
 export async function callGemini(payload: HealthPayload): Promise<string> {
@@ -18,9 +18,9 @@ export async function callGemini(payload: HealthPayload): Promise<string> {
 You are a health expert. Based on the following information, generate personalized health recommendations in bullet points.
 Include 3 points on fitness,
 Include 3 points on diet
-Include 3 points on how to impove given Health Condition: ${payload.healthConditions ? payload.healthConditions : "None"}
+Include a brief few points on how to impove given ${payload.healthConditions ? `Health Conditions: ${payload.healthConditions}` : ''}
 
-Return response only for the provided information in the bullet points, no explanation.
+Return response only for the provided information 
 Be concise and no need to give extra information just some recommendation.
 
 Age: ${payload.age}
@@ -49,13 +49,13 @@ Activity Level: ${payload.activityLevel}
         generationConfig: {
           temperature: 0.9,       // Higher = more creativity
           topK: 40,               // Consider top 40 tokens
-          topP: 0.95,             // Use 95% cumulative probability sampling
+          topP: 0.95,             // Use 95% cumulative probability
         },
       }),
     }
   );
+  console.log("callGemini → healthConditions:", payload.healthConditions);
   
-
   const data = await res.json();
 
   return data?.candidates?.[0]?.content?.parts?.[0]?.text || "• Unable to generate recommendations.";

@@ -31,14 +31,12 @@ interface HealthResults {
     recommendations: string[];
 }
 
-
 type FormData = z.infer<typeof schema>;
 
 interface HealthFormProps {
     setResults: React.Dispatch<React.SetStateAction<HealthResults | null>>;
     results: HealthResults | null;
 }
-
 
 export default function HealthForm({ setResults, results }: HealthFormProps) {
     const {
@@ -62,7 +60,6 @@ export default function HealthForm({ setResults, results }: HealthFormProps) {
     });
     const [loading, setLoading] = useState(false);
     const [timer, setTimer] = useState(0);
-
 
     const watchedActivityLevel = watch('activityLevel');
 
@@ -88,9 +85,9 @@ export default function HealthForm({ setResults, results }: HealthFormProps) {
 
     const onSubmit: SubmitHandler<FormData> = useCallback(
         async (data: FormData, event?: React.BaseSyntheticEvent) => {
-            event?.preventDefault(); // Prevent default form submission
+            event?.preventDefault();
             if (loading) return;
-            console.log('onSubmit called'); // Debug log
+            console.log('onSubmit called');
             setLoading(true);
             setTimer(10);
 
@@ -110,15 +107,35 @@ export default function HealthForm({ setResults, results }: HealthFormProps) {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data),
                 });
+
                 if (!response.ok) {
                     throw new Error(`API error: ${response.statusText}`);
                 }
+
                 const result = await response.json();
-                setResults(result);
-                reset();
+
+                // Create the complete results object with recommendations
+                const completeResults: HealthResults = {
+                    name: result.name,
+                    bmi: result.bmi,
+                    bmr: result.bmr,
+                    calorieNeeds: result.calorieNeeds,
+                    recommendations: result.recommendations || [] // Ensure recommendations are included
+                };
+
+                // Save the complete results to localStorage for persistence
+                localStorage.setItem('healthResults', JSON.stringify(completeResults));
+
+                // Set the results state with the complete data
+                setResults(completeResults);
+
+                // Clear form data after successful submission
+                setTimeout(() => reset(), 500);
                 localStorage.removeItem('formData');
+
             } catch (error) {
                 console.error('Error calculating health metrics:', error);
+                // Save form data for retry
                 localStorage.setItem('formData', JSON.stringify(data));
             } finally {
                 setLoading(false);
