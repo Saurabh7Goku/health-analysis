@@ -20,14 +20,6 @@ import { GenerateDietPlanPdf } from "../api/types";
 
 
 type ActivityLevel = 'sedentary' | 'lightly' | 'moderately' | 'very';
-type DietType = 'vegetarian' | 'non-vegetarian' | '';
-
-interface DietPreferences {
-    dietType: DietType;
-    micronutrientDeficiency: string;
-    allergies: string;
-    medicalConditions: string;
-}
 
 interface HealthResultsProps {
     results: {
@@ -508,7 +500,7 @@ export default function HealthResults({ results }: HealthResultsProps) {
                                         Personalized Diet Plan
                                     </h3>
                                     <p className="text-white/90 text-sm sm:text-base">
-                                        Let's create something amazing together
+                                        Let&apos;s create something amazing together
                                     </p>
                                 </div>
                             </div>
