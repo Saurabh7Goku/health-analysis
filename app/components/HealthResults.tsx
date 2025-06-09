@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import jsPDF from "jspdf";
 import {
     Activity,
@@ -9,7 +9,9 @@ import {
     AlertCircle,
     CheckCircle,
     Calendar,
-    User
+    User,
+    Download,
+    X
 } from 'lucide-react';
 import { GenerateDietPlanPdf } from "../api/types";
 
@@ -32,6 +34,9 @@ interface HealthResultsProps {
 }
 
 export default function HealthResults({ results }: HealthResultsProps) {
+    const [isLoadingDietPlan, setIsLoadingDietPlan] = useState(false);
+    const [showDownloadComplete, setShowDownloadComplete] = useState(false);
+
     const getBMIColor = (bmi: number) => {
         if (bmi < 18.5) return 'text-blue-600';
         if (bmi < 25) return 'text-green-600';
@@ -305,6 +310,46 @@ export default function HealthResults({ results }: HealthResultsProps) {
         }
     };
 
+    const handleDietPlanDownload = async () => {
+        setIsLoadingDietPlan(true);
+        setShowDownloadComplete(false);
+
+        try {
+            await GenerateDietPlanPdf({
+                age: results.age,
+                gender: results.gender,
+                height: results.height,
+                weight: results.weight,
+                bmi: results.bmi,
+                bmr: results.bmr,
+                calorieNeeds: results.calorieNeeds,
+                activityLevel: results.activityLevel,
+                healthConditions: results.recommendations ? results.recommendations.join(', ') : ''
+            });
+
+            // Simulate download completion
+            setTimeout(() => {
+                setIsLoadingDietPlan(false);
+                setShowDownloadComplete(true);
+
+                // Auto-hide the success message after 3 seconds
+                setTimeout(() => {
+                    setShowDownloadComplete(false);
+                }, 3000);
+            }, 2000);
+
+        } catch (error) {
+            console.error('Error generating diet plan:', error);
+            setIsLoadingDietPlan(false);
+            alert('Failed to generate diet plan. Please try again.');
+        }
+    };
+
+    const closeModal = () => {
+        setIsLoadingDietPlan(false);
+        setShowDownloadComplete(false);
+    };
+
     return (
         <div className="bg-gradient-to-tr from-gray-50 via-white to-emerald-50 p-8">
             <div className="max-w-4xl mx-auto space-y-8">
@@ -327,23 +372,68 @@ export default function HealthResults({ results }: HealthResultsProps) {
                         Download PDF
                     </button>
                     <button
-                        onClick={() => GenerateDietPlanPdf({
-                            age: results.age,
-                            gender: results.gender,
-                            height: results.height,
-                            weight: results.weight,
-                            bmi: results.bmi,
-                            bmr: results.bmr,
-                            calorieNeeds: results.calorieNeeds,
-                            activityLevel: results.activityLevel,
-                            healthConditions: results.recommendations ? results.recommendations.join(', ') : ''
-
-                        })}
-                        className="bg-red-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition"
+                        onClick={handleDietPlanDownload}
+                        disabled={isLoadingDietPlan}
+                        className="bg-red-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg font-semibold transition"
                     >
-                        Full Diet Plan
+                        {isLoadingDietPlan ? 'Generating...' : 'Full Diet Plan'}
                     </button>
                 </div>
+
+                {/* Loading/Success Modal */}
+                {(isLoadingDietPlan || showDownloadComplete) && (
+                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div className="bg-white rounded-2xl p-8 max-w-sm w-full mx-4 shadow-2xl">
+                            {/* Close button */}
+                            <button
+                                onClick={closeModal}
+                                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+
+                            {isLoadingDietPlan && (
+                                <div className="text-center">
+                                    {/* Loading spinner */}
+                                    <div className="w-16 h-16 mx-auto mb-4 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+
+                                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                                        Generating Diet Plan
+                                    </h3>
+                                    <p className="text-gray-600 mb-4">
+                                        Please wait while we create your personalized diet plan...
+                                    </p>
+
+                                    {/* Progress bar */}
+                                    <div className="w-full bg-gray-200 rounded-full h-2">
+                                        <div className="bg-blue-600 h-2 rounded-full animate-pulse" style={{ width: '70%' }}></div>
+                                    </div>
+                                </div>
+                            )}
+
+                            {showDownloadComplete && (
+                                <div className="text-center">
+                                    {/* Success icon */}
+                                    <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+                                        <CheckCircle className="w-8 h-8 text-green-600" />
+                                    </div>
+
+                                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                                        Download Complete!
+                                    </h3>
+                                    <p className="text-gray-600 mb-4">
+                                        Your personalized diet plan has been successfully downloaded.
+                                    </p>
+
+                                    <div className="flex items-center justify-center text-sm text-green-600">
+                                        <Download className="w-4 h-4 mr-1" />
+                                        File saved to Downloads
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                )}
 
                 {/* Wrap the entire report content inside this ref */}
                 < div ref={reportRef} >
