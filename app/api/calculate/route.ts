@@ -4,7 +4,10 @@ import { callGemini } from '@/app/api/gemini';
 export async function POST(request: Request) {
     console.log('API /calculate called', new Date().toISOString()); // Debug log
     const data = await request.json();
-    const { name, age, gender, height, weight, activityLevel, healthConditions } = data;
+    const { name, age, gender, height, weight, activityLevel, healthConditions,dietType,
+        micronutrientDeficiency,
+        allergies,
+        medicalConditions } = data;
 
     const heightInMeters = height / 100;
     const bmi = weight / (heightInMeters * heightInMeters);
@@ -40,6 +43,10 @@ export async function POST(request: Request) {
         bmr,
         calorieNeeds,
         healthConditions,
+        dietType,
+      micronutrientDeficiency,
+      allergies,
+      medicalConditions
     };
 
     const text = await callGemini(payload);
