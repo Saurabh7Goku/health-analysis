@@ -1,7 +1,6 @@
 'use client';
 
-import { useRef, useState } from "react";
-import jsPDF from "jspdf";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
     Activity,
     Target,
@@ -11,9 +10,14 @@ import {
     Calendar,
     User,
     Download,
-    X
+    X,
+    Shield,
+    Sparkles,
+    Clock,
 } from 'lucide-react';
+import jsPDF from "jspdf";
 import { GenerateDietPlanPdf } from "../api/types";
+
 
 type ActivityLevel = 'sedentary' | 'lightly' | 'moderately' | 'very';
 type DietType = 'vegetarian' | 'non-vegetarian' | '';
@@ -52,6 +56,41 @@ export default function HealthResults({ results }: HealthResultsProps) {
         medicalConditions: ''
     });
 
+    const firstInputRef = useRef<HTMLInputElement>(null);
+
+    const dialogRef = useRef<HTMLDivElement>(null);
+
+    // Close dialog handler
+    const closeDietDialog = useCallback(() => {
+        setShowDietDialog(false);
+        setDietPreferences({
+            dietType: '',
+            micronutrientDeficiency: '',
+            allergies: '',
+            medicalConditions: ''
+        });
+    }, []);
+
+    // Handle Escape key to close dialog
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                closeDietDialog();
+            }
+        };
+        if (showDietDialog) {
+            window.addEventListener('keydown', handleKeyDown);
+        }
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [showDietDialog, closeDietDialog]);
+
+    // Focus first input when dialog opens
+    useEffect(() => {
+        if (showDietDialog && firstInputRef.current) {
+            firstInputRef.current.focus();
+        }
+    }, [showDietDialog]);
+
     const getBMIColor = (bmi: number) => {
         if (bmi < 18.5) return 'text-blue-600';
         if (bmi < 25) return 'text-green-600';
@@ -73,11 +112,9 @@ export default function HealthResults({ results }: HealthResultsProps) {
         return <AlertCircle className="w-6 h-6 text-red-600" />;
     };
 
-    // Use the recommendations directly from props instead of fetching
     const recommendations = results.recommendations || [];
     const reportRef = useRef<HTMLDivElement>(null);
 
-    // Split recommendations into two columns of 4 items each
     const firstColumn = recommendations.slice(0, 4);
     const secondColumn = recommendations.slice(4, 8);
     const extraRecommendations = recommendations.slice(8);
@@ -325,8 +362,20 @@ export default function HealthResults({ results }: HealthResultsProps) {
         }
     };
 
+    const [loadingProgress, setLoadingProgress] = useState(0);
+
+    // Add this helper function
+    const getLoadingStatus = (progress: number) => {
+        if (progress < 20) return "Analyzing health data...";
+        if (progress < 40) return "Processing dietary requirements...";
+        if (progress < 60) return "Calculating nutritional needs...";
+        if (progress < 80) return "Generating meal recommendations...";
+        if (progress < 95) return "Finalizing your diet plan...";
+        return "Almost ready!";
+    };
+
+
     const handleDietPlanDownload = async () => {
-        // Show the dialog first
         setShowDietDialog(true);
     };
 
@@ -339,6 +388,17 @@ export default function HealthResults({ results }: HealthResultsProps) {
         setShowDietDialog(false);
         setIsLoadingDietPlan(true);
         setShowDownloadComplete(false);
+        setLoadingProgress(0);
+        const progressInterval = setInterval(() => {
+            setLoadingProgress(prev => {
+                if (prev >= 95) {
+                    clearInterval(progressInterval);
+                    return 95;
+                }
+                const increment = Math.random() * 8 + 5; // Random between 2-8
+                return Math.min(prev + increment, 100);
+            });
+        }, 1000);
 
         try {
             const payload = {
@@ -358,11 +418,13 @@ export default function HealthResults({ results }: HealthResultsProps) {
                 medicalConditions: dietPreferences.medicalConditions
             };
             await GenerateDietPlanPdf(payload);
+            setLoadingProgress(100);
 
             // Simulate download completion
             setTimeout(() => {
                 setIsLoadingDietPlan(false);
                 setShowDownloadComplete(true);
+                setLoadingProgress(0);
 
                 // Auto-hide the success message after 3 seconds
                 setTimeout(() => {
@@ -372,20 +434,11 @@ export default function HealthResults({ results }: HealthResultsProps) {
 
         } catch (error) {
             console.error('Error generating diet plan:', error);
+            clearInterval(progressInterval);
             setIsLoadingDietPlan(false);
+            setLoadingProgress(0);
             alert('Failed to generate diet plan. Please try again.');
         }
-    };
-
-    const closeDietDialog = () => {
-        setShowDietDialog(false);
-        // Reset form
-        setDietPreferences({
-            dietType: '',
-            micronutrientDeficiency: '',
-            allergies: '',
-            medicalConditions: ''
-        });
     };
 
     const closeModal = () => {
@@ -394,11 +447,11 @@ export default function HealthResults({ results }: HealthResultsProps) {
     };
 
     return (
-        <div className="bg-gradient-to-tr from-gray-50 via-white to-emerald-50 p-8">
+        <div className="bg-gradient-to-tr from-gray-50 via-white to-emerald-50 p-4 sm:p-8 min-h-screen">
             <div className="max-w-4xl mx-auto space-y-8">
                 {/* Header */}
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 mt-4">
+                    <h1 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 mt-4">
                         Health Report Summary
                     </h1>
                     <div className="flex justify-center items-center text-sm text-gray-600 mt-2">
@@ -407,200 +460,264 @@ export default function HealthResults({ results }: HealthResultsProps) {
                 </div>
 
                 {/* Download PDF button */}
-                <div className="flex justify-center mb-6 gap-2 sm:gap-8 ">
+                <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
                     <button
                         onClick={handleDownloadPdf}
-                        className="bg-blue-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition"
+                        className="bg-blue-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                     >
+                        <Download className="w-4 h-4 inline mr-2" />
                         Download PDF
                     </button>
                     <button
                         onClick={handleDietPlanDownload}
                         disabled={isLoadingDietPlan}
-                        className="bg-red-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg font-semibold transition"
+                        className="bg-red-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:transform-none"
                     >
+                        {/* <Heart className="w-4 h-4 inline mr-2" /> */}
                         {isLoadingDietPlan ? 'Generating...' : 'Full Diet Plan'}
                     </button>
                 </div>
 
-                {/* Diet Plan Questionnaire Dialog */}
+                {/* Enhanced Diet Plan Questionnaire Dialog */}
                 {showDietDialog && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                        <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl max-h-[90vh] overflow-y-auto">
-                            {/* Close button */}
-                            <button
-                                onClick={closeDietDialog}
-                                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
-                            >
-                                <X className="w-5 h-5" />
-                            </button>
-
-                            <div className="text-center mb-6">
-                                <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                                    Diet Plan Preferences
-                                </h3>
-                                <p className="text-gray-600">
-                                    Help us create a personalized diet plan for you
-                                </p>
-                            </div>
-
-                            <div className="space-y-6">
-                                {/* Diet Type */}
-                                <div>
-                                    <label className="block text-sm font-semibold text-gray-700 mb-3">
-                                        1. Are you Vegetarian or Non-Vegetarian? *
-                                    </label>
-                                    <div className="space-y-2">
-                                        <label className="flex items-center">
-                                            <input
-                                                type="radio"
-                                                name="dietType"
-                                                value="vegetarian"
-                                                checked={dietPreferences.dietType === 'vegetarian'}
-                                                onChange={(e) => setDietPreferences({
-                                                    ...dietPreferences,
-                                                    dietType: e.target.value
-                                                })}
-                                                className="w-4 h-4 text-green-600 focus:ring-green-500"
-                                            />
-                                            <span className="ml-2 text-gray-700">Vegetarian</span>
-                                        </label>
-                                        <label className="flex items-center">
-                                            <input
-                                                type="radio"
-                                                name="dietType"
-                                                value="non-vegetarian"
-                                                checked={dietPreferences.dietType === 'non-vegetarian'}
-                                                onChange={(e) => setDietPreferences({
-                                                    ...dietPreferences,
-                                                    dietType: e.target.value
-                                                })}
-                                                className="w-4 h-4 text-green-600 focus:ring-green-500"
-                                            />
-                                            <span className="ml-2 text-gray-700">Non-Vegetarian</span>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                {/* Micronutrient Deficiency */}
-                                <div>
-                                    <label className="block text-sm font-semibold text-gray-700 mb-3">
-                                        2. Do you have any micronutrient deficiencies?
-                                    </label>
-                                    <textarea
-                                        value={dietPreferences.micronutrientDeficiency}
-                                        onChange={(e) => setDietPreferences({
-                                            ...dietPreferences,
-                                            micronutrientDeficiency: e.target.value
-                                        })}
-                                        placeholder="e.g., Vitamin D, Iron, B12, Calcium deficiency..."
-                                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
-                                        rows={3}
-                                    />
-                                </div>
-
-                                {/* Allergies */}
-                                <div>
-                                    <label className="block text-sm font-semibold text-gray-700 mb-3">
-                                        3. Do you have any food allergies or intolerances?
-                                    </label>
-                                    <textarea
-                                        value={dietPreferences.allergies}
-                                        onChange={(e) => setDietPreferences({
-                                            ...dietPreferences,
-                                            allergies: e.target.value
-                                        })}
-                                        placeholder="e.g., Nuts, Dairy, Gluten, Shellfish..."
-                                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
-                                        rows={3}
-                                    />
-                                </div>
-
-                                {/* Medical Conditions */}
-                                <div>
-                                    <label className="block text-sm font-semibold text-gray-700 mb-3">
-                                        4. Any specific medical conditions we should consider?
-                                    </label>
-                                    <textarea
-                                        value={dietPreferences.medicalConditions}
-                                        onChange={(e) => setDietPreferences({
-                                            ...dietPreferences,
-                                            medicalConditions: e.target.value
-                                        })}
-                                        placeholder="e.g., Diabetes, Hypertension, Thyroid issues..."
-                                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
-                                        rows={3}
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Form Buttons */}
-                            <div className="flex gap-4 mt-8">
+                    <div
+                        className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-in fade-in duration-300"
+                        role="dialog"
+                        aria-labelledby="diet-dialog-title"
+                        aria-modal="true"
+                    >
+                        <div
+                            ref={dialogRef}
+                            className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden transform animate-in zoom-in duration-300"
+                        >
+                            {/* Header with Gradient */}
+                            <div className="relative bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 p-6 sm:p-8">
+                                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
                                 <button
                                     onClick={closeDietDialog}
-                                    className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                                    className="absolute top-4 right-4 text-white/80 hover:text-white hover:bg-white/20 rounded-full p-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50"
+                                    aria-label="Close dialog"
                                 >
-                                    Cancel
+                                    <X className="w-5 h-5" />
                                 </button>
-                                <button
-                                    onClick={handleDietFormSubmit}
-                                    className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold"
-                                >
-                                    Generate Diet Plan
-                                </button>
+                                <div className="relative z-10 text-center">
+                                    <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+                                        {/* <Sparkles className="w-8 h-8 text-white" /> */}
+                                    </div>
+                                    <h3 id="diet-dialog-title" className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                                        Personalized Diet Plan
+                                    </h3>
+                                    <p className="text-white/90 text-sm sm:text-base">
+                                        Let's create something amazing together
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Scrollable Content */}
+                            <div className="flex-1 overflow-y-auto p-6 sm:p-8">
+                                <div className="space-y-6">
+                                    {/* Diet Type with Enhanced Cards */}
+                                    <div className="space-y-4">
+                                        <label className="block text-lg font-bold text-gray-800 mb-4 flex items-center">
+                                            <Shield className="w-5 h-5 mr-2 text-emerald-600" />
+                                            Are you Vegetarian or Non-Vegetarian? *
+                                        </label>
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                            {[
+                                                { value: 'vegetarian', label: 'Vegetarian', icon: '🌱', color: 'emerald' },
+                                                { value: 'non-vegetarian', label: 'Non-Vegetarian', icon: '🍗', color: 'orange' }
+                                            ].map((option) => (
+                                                <label
+                                                    key={option.value}
+                                                    className={`relative group cursor-pointer ${dietPreferences.dietType === option.value ? 'scale-105' : ''
+                                                        } transition-all duration-300`}
+                                                >
+                                                    <input
+                                                        type="radio"
+                                                        name="dietType"
+                                                        value={option.value}
+                                                        checked={dietPreferences.dietType === option.value}
+                                                        onChange={(e) => {
+                                                            console.log('Setting dietType:', e.target.value); // Debug log
+                                                            setDietPreferences({
+                                                                ...dietPreferences,
+                                                                dietType: e.target.value
+                                                            });
+                                                        }}
+                                                        className="sr-only"
+                                                        ref={option.value === 'vegetarian' ? firstInputRef : undefined}
+                                                    />
+                                                    <div
+                                                        className={`p-6 rounded-2xl border-2 transition-all duration-300 ${dietPreferences.dietType === option.value
+                                                            ? `border-${option.color}-500 bg-${option.color}-50 shadow-lg shadow-${option.color}-200/50`
+                                                            : `border-gray-200 bg-white hover:border-${option.color}-300 hover:shadow-md`
+                                                            }`}
+                                                    >
+                                                        <div className="text-center">
+                                                            <div
+                                                                className={`w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center ${dietPreferences.dietType === option.value
+                                                                    ? `bg-${option.color}-500 text-white`
+                                                                    : `bg-gray-100 text-gray-400 group-hover:bg-${option.color}-100 group-hover:text-${option.color}-500`
+                                                                    } transition-all duration-300`}
+                                                            >
+                                                                {option.icon}
+                                                            </div>
+                                                            <span
+                                                                className={`font-semibold ${dietPreferences.dietType === option.value
+                                                                    ? `text-${option.color}-700`
+                                                                    : 'text-gray-700'
+                                                                    }`}
+                                                            >
+                                                                {option.label}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Enhanced Text Areas */}
+                                    {[
+                                        {
+                                            label: 'Do you have any micronutrient deficiencies?',
+                                            placeholder: 'e.g., Vitamin D, Iron, B12, Calcium deficiency...',
+                                            value: dietPreferences.micronutrientDeficiency,
+                                            key: 'micronutrientDeficiency',
+                                            icon: '💊'
+                                        },
+                                        {
+                                            label: 'Do you have any food allergies or intolerances?',
+                                            placeholder: 'e.g., Nuts, Dairy, Gluten, Shellfish...',
+                                            value: dietPreferences.allergies,
+                                            key: 'allergies',
+                                            icon: '⚠️'
+                                        },
+                                        {
+                                            label: 'Any specific medical conditions we should consider?',
+                                            placeholder: 'e.g., Diabetes, Hypertension, Thyroid issues...',
+                                            value: dietPreferences.medicalConditions,
+                                            key: 'medicalConditions',
+                                            icon: '🏥'
+                                        }
+                                    ].map((field) => (
+                                        <div key={field.key} className="space-y-2">
+                                            <label className="block text-base font-semibold text-gray-800 flex items-center">
+                                                <span className="text-lg lg:text-xl mr-2">{field.icon}</span>
+                                                {field.label}
+                                            </label>
+                                            <div className="relative">
+                                                <textarea
+                                                    value={field.value}
+                                                    onChange={(e) => {
+                                                        console.log(`Setting ${field.key}:`, e.target.value); // Debug log
+                                                        setDietPreferences({
+                                                            ...dietPreferences,
+                                                            [field.key]: e.target.value
+                                                        });
+                                                    }}
+                                                    placeholder={field.placeholder}
+                                                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 resize-none hover:border-gray-300 bg-gray-50/50 focus:bg-white"
+                                                    rows={3}
+                                                />
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Footer */}
+                            <div className="p-6 sm:p-8 bg-gray-50/50 border-t border-gray-100">
+                                <div className="flex flex-col sm:flex-row gap-4">
+                                    <button
+                                        onClick={closeDietDialog}
+                                        className="flex-1 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-xl hover:bg-gray-100 hover:border-gray-400 transition-all duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                        aria-label="Cancel diet plan"
+                                    >
+                                        Cancel
+                                    </button>
+                                    <button
+                                        onClick={handleDietFormSubmit}
+                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-xl hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 font-semibold transform hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                                        aria-label="Generate diet plan"
+                                    >
+                                        <Sparkles className="w-4 h-4 inline mr-2" />
+                                        Generate Diet Plan
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 )}
 
-                {/* Loading/Success Modal */}
+                {/* Enhanced Loading/Success Modal */}
                 {(isLoadingDietPlan || showDownloadComplete) && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                        <div className="bg-white rounded-2xl p-8 max-w-sm w-full mx-4 shadow-2xl">
-                            {/* Close button */}
+                    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-in fade-in duration-300">
+                        <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full transform animate-in zoom-in duration-300 overflow-hidden">
                             <button
                                 onClick={closeModal}
-                                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full p-2 transition-all duration-200 z-10"
                             >
                                 <X className="w-5 h-5" />
                             </button>
 
                             {isLoadingDietPlan && (
-                                <div className="text-center">
-                                    {/* Loading spinner */}
-                                    <div className="w-16 h-16 mx-auto mb-4 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+                                <div className="p-8 sm:p-12 text-center">
+                                    {/* Static Loading Icon */}
+                                    <div className="relative mb-8">
+                                        <div className="w-20 h-20 mx-auto bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full flex items-center justify-center">
+                                            <Clock className="w-10 h-10 text-white" />
+                                        </div>
+                                    </div>
 
-                                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                                        Generating Diet Plan
+                                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3">
+                                        Creating Your Diet Plan
                                     </h3>
-                                    <p className="text-gray-600 mb-4">
-                                        Please wait while we create your personalized diet plan...
+                                    <p className="text-gray-600 mb-6 text-sm sm:text-base">
+                                        Our AI is analyzing your preferences and health data...
                                     </p>
 
-                                    {/* Progress bar */}
-                                    <div className="w-full bg-gray-200 rounded-full h-2">
-                                        <div className="bg-blue-600 h-2 rounded-full animate-pulse" style={{ width: '70%' }}></div>
+                                    {/* Real Progress Bar */}
+                                    <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden mb-4">
+                                        <div
+                                            className="h-full bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full transition-all duration-500 ease-out"
+                                            style={{ width: `${loadingProgress}%` }}
+                                        ></div>
+                                    </div>
+
+                                    {/* Progress Text */}
+                                    <div className="text-sm text-gray-600 mb-2">
+                                        {loadingProgress.toFixed(2)}% Complete
+                                    </div>
+
+                                    {/* Dynamic Status Text */}
+                                    <div className="text-xs text-gray-500 flex items-center justify-center">
+                                        <Sparkles className="w-3 h-3 mr-1" />
+                                        {getLoadingStatus(loadingProgress)}
                                     </div>
                                 </div>
                             )}
 
                             {showDownloadComplete && (
-                                <div className="text-center">
-                                    {/* Success icon */}
-                                    <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
-                                        <CheckCircle className="w-8 h-8 text-green-600" />
+                                <div className="p-8 sm:p-12 text-center">
+                                    {/* Enhanced Success Animation */}
+                                    <div className="relative mb-8">
+                                        <div className="w-20 h-20 mx-auto bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center animate-bounce">
+                                            <CheckCircle className="w-10 h-10 text-white" />
+                                        </div>
+                                        <div className="absolute inset-0 w-20 h-20 mx-auto bg-green-400 rounded-full animate-ping opacity-20"></div>
                                     </div>
 
-                                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                                        Download Complete!
+                                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3">
+                                        Success! 🎉
                                     </h3>
-                                    <p className="text-gray-600 mb-4">
-                                        Your personalized diet plan has been successfully downloaded.
+                                    <p className="text-gray-600 mb-6 text-sm sm:text-base">
+                                        Your personalized diet plan has been generated and downloaded successfully.
                                     </p>
 
-                                    <div className="flex items-center justify-center text-sm text-green-600">
-                                        <Download className="w-4 h-4 mr-1" />
-                                        File saved to Downloads
+                                    <div className="flex items-center justify-center text-sm text-emerald-600 bg-emerald-50 rounded-full py-2 px-4 inline-flex">
+                                        <Download className="w-4 h-4 mr-2" />
+                                        File saved to Downloads folder
                                     </div>
                                 </div>
                             )}
@@ -608,14 +725,14 @@ export default function HealthResults({ results }: HealthResultsProps) {
                     </div>
                 )}
 
-                {/* Wrap the entire report content inside this ref */}
-                < div ref={reportRef} >
+                {/* Main Content */}
+                <div ref={reportRef}>
                     {/* Health Metrics Cards */}
-                    < div className="grid md:grid-cols-3 gap-6" >
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* BMI */}
-                        < div className={`rounded-2xl p-6 shadow-lg bg-gradient-to-br ${getBMIBgColor(results.bmi.value)}`}>
+                        <div className={`rounded-2xl p-6 shadow-lg bg-gradient-to-br ${getBMIBgColor(results.bmi.value)} transform hover:scale-105 transition-all duration-300`}>
                             <div className="flex items-center justify-between">
-                                <div className="bg-white p-2 rounded-xl">{getBMIIcon(results.bmi.value)}</div>
+                                <div className="bg-white p-2 rounded-xl shadow-sm">{getBMIIcon(results.bmi.value)}</div>
                                 <div className="text-right">
                                     <div className="text-xs text-gray-500 uppercase">BMI</div>
                                     <div className="text-sm font-semibold text-gray-600">Body Mass Index</div>
@@ -630,9 +747,9 @@ export default function HealthResults({ results }: HealthResultsProps) {
                         </div>
 
                         {/* BMR */}
-                        <div className="rounded-2xl p-6 shadow-lg bg-gradient-to-br from-purple-100 to-purple-200">
+                        <div className="rounded-2xl p-6 shadow-lg bg-gradient-to-br from-purple-100 to-purple-200 transform hover:scale-105 transition-all duration-300">
                             <div className="flex items-center justify-between">
-                                <div className="bg-white p-2 rounded-xl">
+                                <div className="bg-white p-2 rounded-xl shadow-sm">
                                     <Activity className="text-purple-600 w-6 h-6" />
                                 </div>
                                 <div className="text-right">
@@ -647,9 +764,9 @@ export default function HealthResults({ results }: HealthResultsProps) {
                         </div>
 
                         {/* Calories */}
-                        <div className="rounded-2xl p-6 shadow-lg bg-gradient-to-br from-orange-100 to-orange-200">
+                        <div className="rounded-2xl p-6 shadow-lg bg-gradient-to-br from-orange-100 to-orange-200 transform hover:scale-105 transition-all duration-300">
                             <div className="flex items-center justify-between">
-                                <div className="bg-white p-2 rounded-xl">
+                                <div className="bg-white p-2 rounded-xl shadow-sm">
                                     <Target className="text-orange-600 w-6 h-6" />
                                 </div>
                                 <div className="text-right">
@@ -666,15 +783,15 @@ export default function HealthResults({ results }: HealthResultsProps) {
 
                     {/* Recommendations Section */}
                     <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mt-10">
-                        <div className="bg-gradient-to-r from-blue-600 to-emerald-600 px-8 py-6">
-                            <h2 className="text-2xl font-bold text-white">
+                        <div className="bg-gradient-to-r from-blue-600 to-emerald-600 px-6 sm:px-8 py-6">
+                            <h2 className="text-xl sm:text-2xl font-bold text-white">
                                 Personalized Recommendations
                             </h2>
-                            <p className="text-blue-100 mt-1">Tailored health guidance for your wellness journey</p>
+                            <p className="text-blue-100 mt-1 text-sm sm:text-base">Tailored health guidance for your wellness journey</p>
                         </div>
 
-                        <div className="p-8">
-                            <div className="grid md:grid-cols-2 gap-12">
+                        <div className="p-6 sm:p-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
                                 {/* First Column */}
                                 <div className="space-y-6">
                                     {firstColumn.map((rec, idx) => (
@@ -684,7 +801,7 @@ export default function HealthResults({ results }: HealthResultsProps) {
                                                     <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                                                         <span className="text-white font-bold text-lg">1</span>
                                                     </div>
-                                                    <h3 className="text-xl font-bold text-gray-800">
+                                                    <h3 className="text-lg sm:text-xl font-bold text-gray-800">
                                                         {rec.replace(/^[-•\d.]+\s*/, '').replace(/\*+/g, '')}
                                                     </h3>
                                                 </div>
@@ -693,7 +810,7 @@ export default function HealthResults({ results }: HealthResultsProps) {
                                                     <div className="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
                                                         {idx}
                                                     </div>
-                                                    <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
+                                                    <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors text-sm sm:text-base">
                                                         {rec.replace(/^[-•\d.]+\s*/, '')}
                                                     </p>
                                                 </div>
@@ -711,7 +828,7 @@ export default function HealthResults({ results }: HealthResultsProps) {
                                                     <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center">
                                                         <span className="text-white font-bold text-lg">2</span>
                                                     </div>
-                                                    <h3 className="text-xl font-bold text-gray-800">
+                                                    <h3 className="text-lg sm:text-xl font-bold text-gray-800">
                                                         {rec.replace(/^[-•\d.]+\s*/, '').replace(/\*+/g, '')}
                                                     </h3>
                                                 </div>
@@ -720,7 +837,7 @@ export default function HealthResults({ results }: HealthResultsProps) {
                                                     <div className="w-6 h-6 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
                                                         {idx}
                                                     </div>
-                                                    <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
+                                                    <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors text-sm sm:text-base">
                                                         {rec.replace(/^[-•\d.]+\s*/, '')}
                                                     </p>
                                                 </div>

@@ -827,7 +827,6 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jspdf$2f$dist$2f$jspdf$2e$es$2e$min$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/jspdf/dist/jspdf.es.min.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$activity$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Activity$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/activity.js [app-client] (ecmascript) <export default as Activity>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$target$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Target$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/target.js [app-client] (ecmascript) <export default as Target>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$up$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingUp$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/trending-up.js [app-client] (ecmascript) <export default as TrendingUp>");
@@ -837,6 +836,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/user.js [app-client] (ecmascript) <export default as User>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/download.js [app-client] (ecmascript) <export default as Download>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/sparkles.js [app-client] (ecmascript) <export default as Sparkles>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$heart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Heart$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/heart.js [app-client] (ecmascript) <export default as Heart>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Shield$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/shield.js [app-client] (ecmascript) <export default as Shield>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/clock.js [app-client] (ecmascript) <export default as Clock>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$jspdf$2f$dist$2f$jspdf$2e$es$2e$min$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/jspdf/dist/jspdf.es.min.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
@@ -854,6 +858,51 @@ function HealthResults({ results }) {
         allergies: '',
         medicalConditions: ''
     });
+    const firstInputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const dialogRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    // Close dialog handler
+    const closeDietDialog = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "HealthResults.useCallback[closeDietDialog]": ()=>{
+            setShowDietDialog(false);
+            setDietPreferences({
+                dietType: '',
+                micronutrientDeficiency: '',
+                allergies: '',
+                medicalConditions: ''
+            });
+        }
+    }["HealthResults.useCallback[closeDietDialog]"], []);
+    // Handle Escape key to close dialog
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "HealthResults.useEffect": ()=>{
+            const handleKeyDown = {
+                "HealthResults.useEffect.handleKeyDown": (e)=>{
+                    if (e.key === 'Escape') {
+                        closeDietDialog();
+                    }
+                }
+            }["HealthResults.useEffect.handleKeyDown"];
+            if (showDietDialog) {
+                window.addEventListener('keydown', handleKeyDown);
+            }
+            return ({
+                "HealthResults.useEffect": ()=>window.removeEventListener('keydown', handleKeyDown)
+            })["HealthResults.useEffect"];
+        }
+    }["HealthResults.useEffect"], [
+        showDietDialog,
+        closeDietDialog
+    ]);
+    // Focus first input when dialog opens
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "HealthResults.useEffect": ()=>{
+            if (showDietDialog && firstInputRef.current) {
+                firstInputRef.current.focus();
+            }
+        }
+    }["HealthResults.useEffect"], [
+        showDietDialog
+    ]);
     const getBMIColor = (bmi)=>{
         if (bmi < 18.5) return 'text-blue-600';
         if (bmi < 25) return 'text-green-600';
@@ -871,35 +920,33 @@ function HealthResults({ results }) {
             className: "w-6 h-6 text-blue-600"
         }, void 0, false, {
             fileName: "[project]/app/components/HealthResults.tsx",
-            lineNumber: 70,
+            lineNumber: 109,
             columnNumber: 32
         }, this);
         if (bmi < 25) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
             className: "w-6 h-6 text-green-600"
         }, void 0, false, {
             fileName: "[project]/app/components/HealthResults.tsx",
-            lineNumber: 71,
+            lineNumber: 110,
             columnNumber: 30
         }, this);
         if (bmi < 30) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__["AlertCircle"], {
             className: "w-6 h-6 text-yellow-600"
         }, void 0, false, {
             fileName: "[project]/app/components/HealthResults.tsx",
-            lineNumber: 72,
+            lineNumber: 111,
             columnNumber: 30
         }, this);
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__["AlertCircle"], {
             className: "w-6 h-6 text-red-600"
         }, void 0, false, {
             fileName: "[project]/app/components/HealthResults.tsx",
-            lineNumber: 73,
+            lineNumber: 112,
             columnNumber: 16
         }, this);
     };
-    // Use the recommendations directly from props instead of fetching
     const recommendations = results.recommendations || [];
     const reportRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
-    // Split recommendations into two columns of 4 items each
     const firstColumn = recommendations.slice(0, 4);
     const secondColumn = recommendations.slice(4, 8);
     const extraRecommendations = recommendations.slice(8);
@@ -1139,7 +1186,6 @@ function HealthResults({ results }) {
         }
     };
     const handleDietPlanDownload = async ()=>{
-        // Show the dialog first
         setShowDietDialog(true);
     };
     const handleDietFormSubmit = async ()=>{
@@ -1148,12 +1194,12 @@ function HealthResults({ results }) {
             alert('Please select your diet type (Vegetarian or Non-Vegetarian)');
             return;
         }
-        console.log('Submitting Diet Preferences:', dietPreferences);
         setShowDietDialog(false);
         setIsLoadingDietPlan(true);
         setShowDownloadComplete(false);
         try {
             const payload = {
+                name: results.name,
                 age: results.age,
                 gender: results.gender,
                 height: results.height,
@@ -1168,7 +1214,7 @@ function HealthResults({ results }) {
                 allergies: dietPreferences.allergies,
                 medicalConditions: dietPreferences.medicalConditions
             };
-            console.log('Payload for GenerateDietPlanPdf:', payload);
+            await GenerateDietPlanPdf(payload);
             // Simulate download completion
             setTimeout(()=>{
                 setIsLoadingDietPlan(false);
@@ -1184,22 +1230,12 @@ function HealthResults({ results }) {
             alert('Failed to generate diet plan. Please try again.');
         }
     };
-    const closeDietDialog = ()=>{
-        setShowDietDialog(false);
-        // Reset form
-        setDietPreferences({
-            dietType: '',
-            micronutrientDeficiency: '',
-            allergies: '',
-            medicalConditions: ''
-        });
-    };
     const closeModal = ()=>{
         setIsLoadingDietPlan(false);
         setShowDownloadComplete(false);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "bg-gradient-to-tr from-gray-50 via-white to-emerald-50 p-8",
+        className: "bg-gradient-to-tr from-gray-50 via-white to-emerald-50 p-4 sm:p-8 min-h-screen",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-4xl mx-auto space-y-8",
             children: [
@@ -1207,11 +1243,11 @@ function HealthResults({ results }) {
                     className: "text-center",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 mt-4",
+                            className: "text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 mt-4",
                             children: "Health Report Summary"
                         }, void 0, false, {
                             fileName: "[project]/app/components/HealthResults.tsx",
-                            lineNumber: 403,
+                            lineNumber: 427,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1221,7 +1257,7 @@ function HealthResults({ results }) {
                                     className: "w-4 h-4 mr-1"
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                    lineNumber: 407,
+                                    lineNumber: 431,
                                     columnNumber: 25
                                 }, this),
                                 " Analysis for ",
@@ -1229,468 +1265,630 @@ function HealthResults({ results }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/HealthResults.tsx",
-                            lineNumber: 406,
+                            lineNumber: 430,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/HealthResults.tsx",
-                    lineNumber: 402,
+                    lineNumber: 426,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex justify-center mb-6 gap-2 sm:gap-8 ",
+                    className: "flex flex-col sm:flex-row justify-center gap-4 mb-6",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: handleDownloadPdf,
-                            className: "bg-blue-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition",
-                            children: "Download PDF"
-                        }, void 0, false, {
+                            className: "bg-blue-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__["Download"], {
+                                    className: "w-4 h-4 inline mr-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                    lineNumber: 441,
+                                    columnNumber: 25
+                                }, this),
+                                "Download PDF"
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/app/components/HealthResults.tsx",
-                            lineNumber: 413,
+                            lineNumber: 437,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: handleDietPlanDownload,
                             disabled: isLoadingDietPlan,
-                            className: "bg-red-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg font-semibold transition",
-                            children: isLoadingDietPlan ? 'Generating...' : 'Full Diet Plan'
-                        }, void 0, false, {
+                            className: "bg-red-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:transform-none",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$heart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Heart$3e$__["Heart"], {
+                                    className: "w-4 h-4 inline mr-2"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                    lineNumber: 449,
+                                    columnNumber: 25
+                                }, this),
+                                isLoadingDietPlan ? 'Generating...' : 'Full Diet Plan'
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/app/components/HealthResults.tsx",
-                            lineNumber: 419,
+                            lineNumber: 444,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/HealthResults.tsx",
-                    lineNumber: 412,
+                    lineNumber: 436,
                     columnNumber: 17
                 }, this),
                 showDietDialog && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50",
+                    className: "fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-in fade-in duration-300",
+                    role: "dialog",
+                    "aria-labelledby": "diet-dialog-title",
+                    "aria-modal": "true",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl max-h-[90vh] overflow-y-auto",
+                        ref: dialogRef,
+                        className: "bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden transform animate-in zoom-in duration-300",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: closeDietDialog,
-                                className: "absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                    className: "w-5 h-5"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/HealthResults.tsx",
-                                    lineNumber: 437,
-                                    columnNumber: 33
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/app/components/HealthResults.tsx",
-                                lineNumber: 433,
-                                columnNumber: 29
-                            }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-center mb-6",
+                                className: "relative bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 p-6 sm:p-8",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-2xl font-bold text-gray-800 mb-2",
-                                        children: "Diet Plan Preferences"
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "absolute inset-0 bg-white/10 backdrop-blur-sm"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 441,
+                                        lineNumber: 468,
                                         columnNumber: 33
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-600",
-                                        children: "Help us create a personalized diet plan for you"
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: closeDietDialog,
+                                        className: "absolute top-4 right-4 text-white/80 hover:text-white hover:bg-white/20 rounded-full p-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50",
+                                        "aria-label": "Close dialog",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                            className: "w-5 h-5"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/components/HealthResults.tsx",
+                                            lineNumber: 474,
+                                            columnNumber: 37
+                                        }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 444,
+                                        lineNumber: 469,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "relative z-10 text-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
+                                                    className: "w-8 h-8 text-white"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                                    lineNumber: 478,
+                                                    columnNumber: 41
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/HealthResults.tsx",
+                                                lineNumber: 477,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                id: "diet-dialog-title",
+                                                className: "text-2xl sm:text-3xl font-bold text-white mb-2",
+                                                children: "Personalized Diet Plan"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/HealthResults.tsx",
+                                                lineNumber: 480,
+                                                columnNumber: 37
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-white/90 text-sm sm:text-base",
+                                                children: "Let's create something amazing together"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/HealthResults.tsx",
+                                                lineNumber: 483,
+                                                columnNumber: 37
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/components/HealthResults.tsx",
+                                        lineNumber: 476,
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                lineNumber: 440,
+                                lineNumber: 467,
                                 columnNumber: 29
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "space-y-6",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                className: "block text-sm font-semibold text-gray-700 mb-3",
-                                                children: "1. Are you Vegetarian or Non-Vegetarian? *"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/components/HealthResults.tsx",
-                                                lineNumber: 452,
-                                                columnNumber: 37
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex-1 overflow-y-auto p-6 sm:p-8",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "space-y-6",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "space-y-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                    className: "block text-lg font-bold text-gray-800 mb-4 flex items-center",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Shield$3e$__["Shield"], {
+                                                            className: "w-5 h-5 mr-2 text-emerald-600"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/components/HealthResults.tsx",
+                                                            lineNumber: 495,
+                                                            columnNumber: 45
+                                                        }, this),
+                                                        "Are you Vegetarian or Non-Vegetarian? *"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                                    lineNumber: 494,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "grid grid-cols-1 sm:grid-cols-2 gap-4",
+                                                    children: [
+                                                        {
+                                                            value: 'vegetarian',
+                                                            label: 'Vegetarian',
+                                                            icon: '🌱',
+                                                            color: 'emerald'
+                                                        },
+                                                        {
+                                                            value: 'non-vegetarian',
+                                                            label: 'Non-Vegetarian',
+                                                            icon: '🍗',
+                                                            color: 'orange'
+                                                        }
+                                                    ].map((option)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                            className: `relative group cursor-pointer ${dietPreferences.dietType === option.value ? 'scale-105' : ''} transition-all duration-300`,
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                    type: "radio",
+                                                                    name: "dietType",
+                                                                    value: option.value,
+                                                                    checked: dietPreferences.dietType === option.value,
+                                                                    onChange: (e)=>{
+                                                                        console.log('Setting dietType:', e.target.value); // Debug log
+                                                                        setDietPreferences({
+                                                                            ...dietPreferences,
+                                                                            dietType: e.target.value
+                                                                        });
+                                                                    },
+                                                                    className: "sr-only",
+                                                                    ref: option.value === 'vegetarian' ? firstInputRef : undefined
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                                                    lineNumber: 508,
+                                                                    columnNumber: 53
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: `p-6 rounded-2xl border-2 transition-all duration-300 ${dietPreferences.dietType === option.value ? `border-${option.color}-500 bg-${option.color}-50 shadow-lg shadow-${option.color}-200/50` : `border-gray-200 bg-white hover:border-${option.color}-300 hover:shadow-md`}`,
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "text-center",
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                                className: `w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center ${dietPreferences.dietType === option.value ? `bg-${option.color}-500 text-white` : `bg-gray-100 text-gray-400 group-hover:bg-${option.color}-100 group-hover:text-${option.color}-500`} transition-all duration-300`,
+                                                                                children: option.icon
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/app/components/HealthResults.tsx",
+                                                                                lineNumber: 530,
+                                                                                columnNumber: 61
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                className: `font-semibold ${dietPreferences.dietType === option.value ? `text-${option.color}-700` : 'text-gray-700'}`,
+                                                                                children: option.label
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/app/components/HealthResults.tsx",
+                                                                                lineNumber: 538,
+                                                                                columnNumber: 61
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/app/components/HealthResults.tsx",
+                                                                        lineNumber: 529,
+                                                                        columnNumber: 57
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                                                    lineNumber: 523,
+                                                                    columnNumber: 53
+                                                                }, this)
+                                                            ]
+                                                        }, option.value, true, {
+                                                            fileName: "[project]/app/components/HealthResults.tsx",
+                                                            lineNumber: 503,
+                                                            columnNumber: 49
+                                                        }, this))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                                    lineNumber: 498,
+                                                    columnNumber: 41
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/components/HealthResults.tsx",
+                                            lineNumber: 493,
+                                            columnNumber: 37
+                                        }, this),
+                                        [
+                                            {
+                                                label: 'Do you have any micronutrient deficiencies?',
+                                                placeholder: 'e.g., Vitamin D, Iron, B12, Calcium deficiency...',
+                                                value: dietPreferences.micronutrientDeficiency,
+                                                key: 'micronutrientDeficiency',
+                                                icon: '💊'
+                                            },
+                                            {
+                                                label: 'Do you have any food allergies or intolerances?',
+                                                placeholder: 'e.g., Nuts, Dairy, Gluten, Shellfish...',
+                                                value: dietPreferences.allergies,
+                                                key: 'allergies',
+                                                icon: '⚠️'
+                                            },
+                                            {
+                                                label: 'Any specific medical conditions we should consider?',
+                                                placeholder: 'e.g., Diabetes, Hypertension, Thyroid issues...',
+                                                value: dietPreferences.medicalConditions,
+                                                key: 'medicalConditions',
+                                                icon: '🏥'
+                                            }
+                                        ].map((field)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "space-y-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "flex items-center",
+                                                        className: "block text-base font-semibold text-gray-800 flex items-center",
                                                         children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                type: "radio",
-                                                                name: "dietType",
-                                                                value: "vegetarian",
-                                                                checked: dietPreferences.dietType === 'vegetarian',
-                                                                onChange: (e)=>setDietPreferences({
-                                                                        ...dietPreferences,
-                                                                        dietType: e.target.value
-                                                                    }),
-                                                                className: "w-4 h-4 text-green-600 focus:ring-green-500"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/app/components/HealthResults.tsx",
-                                                                lineNumber: 457,
-                                                                columnNumber: 45
-                                                            }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "ml-2 text-gray-700",
-                                                                children: "Vegetarian"
+                                                                className: "text-lg lg:text-xl mr-2",
+                                                                children: field.icon
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                                                lineNumber: 468,
-                                                                columnNumber: 45
-                                                            }, this)
+                                                                lineNumber: 579,
+                                                                columnNumber: 49
+                                                            }, this),
+                                                            field.label
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                        lineNumber: 456,
-                                                        columnNumber: 41
+                                                        lineNumber: 578,
+                                                        columnNumber: 45
                                                     }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "flex items-center",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                type: "radio",
-                                                                name: "dietType",
-                                                                value: "non-vegetarian",
-                                                                checked: dietPreferences.dietType === 'non-vegetarian',
-                                                                onChange: (e)=>setDietPreferences({
-                                                                        ...dietPreferences,
-                                                                        dietType: e.target.value
-                                                                    }),
-                                                                className: "w-4 h-4 text-green-600 focus:ring-green-500"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/app/components/HealthResults.tsx",
-                                                                lineNumber: 471,
-                                                                columnNumber: 45
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "ml-2 text-gray-700",
-                                                                children: "Non-Vegetarian"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/app/components/HealthResults.tsx",
-                                                                lineNumber: 482,
-                                                                columnNumber: 45
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "relative",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                                                            value: field.value,
+                                                            onChange: (e)=>{
+                                                                console.log(`Setting ${field.key}:`, e.target.value); // Debug log
+                                                                setDietPreferences({
+                                                                    ...dietPreferences,
+                                                                    [field.key]: e.target.value
+                                                                });
+                                                            },
+                                                            placeholder: field.placeholder,
+                                                            className: "w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 resize-none hover:border-gray-300 bg-gray-50/50 focus:bg-white",
+                                                            rows: 3
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/components/HealthResults.tsx",
+                                                            lineNumber: 583,
+                                                            columnNumber: 49
+                                                        }, this)
+                                                    }, void 0, false, {
                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                        lineNumber: 470,
-                                                        columnNumber: 41
+                                                        lineNumber: 582,
+                                                        columnNumber: 45
+                                                    }, this)
+                                                ]
+                                            }, field.key, true, {
+                                                fileName: "[project]/app/components/HealthResults.tsx",
+                                                lineNumber: 577,
+                                                columnNumber: 41
+                                            }, this))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                    lineNumber: 491,
+                                    columnNumber: 33
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/app/components/HealthResults.tsx",
+                                lineNumber: 490,
+                                columnNumber: 29
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "p-6 sm:p-8 bg-gray-50/50 border-t border-gray-100",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex flex-col sm:flex-row gap-4",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: closeDietDialog,
+                                            className: "flex-1 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-xl hover:bg-gray-100 hover:border-gray-400 transition-all duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-gray-400",
+                                            "aria-label": "Cancel diet plan",
+                                            children: "Cancel"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/components/HealthResults.tsx",
+                                            lineNumber: 605,
+                                            columnNumber: 37
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: handleDietFormSubmit,
+                                            className: "flex-1 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-xl hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 font-semibold transform hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-emerald-500",
+                                            "aria-label": "Generate diet plan",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
+                                                    className: "w-4 h-4 inline mr-2"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                                    lineNumber: 617,
+                                                    columnNumber: 41
+                                                }, this),
+                                                "Generate Diet Plan"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/components/HealthResults.tsx",
+                                            lineNumber: 612,
+                                            columnNumber: 37
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                    lineNumber: 604,
+                                    columnNumber: 33
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/app/components/HealthResults.tsx",
+                                lineNumber: 603,
+                                columnNumber: 29
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/components/HealthResults.tsx",
+                        lineNumber: 462,
+                        columnNumber: 25
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/app/components/HealthResults.tsx",
+                    lineNumber: 456,
+                    columnNumber: 21
+                }, this),
+                (isLoadingDietPlan || showDownloadComplete) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-in fade-in duration-300",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "bg-white rounded-3xl shadow-2xl max-w-md w-full transform animate-in zoom-in duration-300 overflow-hidden",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: closeModal,
+                                className: "absolute top-4 right-4 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full p-2 transition-all duration-200 z-10",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                    className: "w-5 h-5"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                    lineNumber: 634,
+                                    columnNumber: 33
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/app/components/HealthResults.tsx",
+                                lineNumber: 630,
+                                columnNumber: 29
+                            }, this),
+                            isLoadingDietPlan && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "p-8 sm:p-12 text-center",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "relative mb-8",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-20 h-20 mx-auto",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "absolute inset-0 border-4 border-blue-200 rounded-full"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/components/HealthResults.tsx",
+                                                        lineNumber: 642,
+                                                        columnNumber: 45
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "absolute inset-0 border-4 border-transparent border-t-blue-600 rounded-full animate-spin"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/components/HealthResults.tsx",
+                                                        lineNumber: 643,
+                                                        columnNumber: 45
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "absolute inset-2 border-4 border-transparent border-t-emerald-500 rounded-full animate-spin",
+                                                        style: {
+                                                            animationDirection: 'reverse',
+                                                            animationDuration: '1.5s'
+                                                        }
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/components/HealthResults.tsx",
+                                                        lineNumber: 644,
+                                                        columnNumber: 45
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                                lineNumber: 455,
-                                                columnNumber: 37
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 451,
-                                        columnNumber: 33
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                className: "block text-sm font-semibold text-gray-700 mb-3",
-                                                children: "2. Do you have any micronutrient deficiencies?"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/components/HealthResults.tsx",
-                                                lineNumber: 489,
-                                                columnNumber: 37
+                                                lineNumber: 641,
+                                                columnNumber: 41
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                                                value: dietPreferences.micronutrientDeficiency,
-                                                onChange: (e)=>setDietPreferences({
-                                                        ...dietPreferences,
-                                                        micronutrientDeficiency: e.target.value
-                                                    }),
-                                                placeholder: "e.g., Vitamin D, Iron, B12, Calcium deficiency...",
-                                                className: "w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none",
-                                                rows: 3
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "absolute inset-0 flex items-center justify-center",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__["Clock"], {
+                                                    className: "w-8 h-8 text-blue-600 animate-pulse"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                                    lineNumber: 647,
+                                                    columnNumber: 45
+                                                }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                                lineNumber: 492,
-                                                columnNumber: 37
+                                                lineNumber: 646,
+                                                columnNumber: 41
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 488,
-                                        columnNumber: 33
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                className: "block text-sm font-semibold text-gray-700 mb-3",
-                                                children: "3. Do you have any food allergies or intolerances?"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/components/HealthResults.tsx",
-                                                lineNumber: 506,
-                                                columnNumber: 37
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                                                value: dietPreferences.allergies,
-                                                onChange: (e)=>setDietPreferences({
-                                                        ...dietPreferences,
-                                                        allergies: e.target.value
-                                                    }),
-                                                placeholder: "e.g., Nuts, Dairy, Gluten, Shellfish...",
-                                                className: "w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none",
-                                                rows: 3
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/components/HealthResults.tsx",
-                                                lineNumber: 509,
-                                                columnNumber: 37
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 505,
-                                        columnNumber: 33
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                className: "block text-sm font-semibold text-gray-700 mb-3",
-                                                children: "4. Any specific medical conditions we should consider?"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/components/HealthResults.tsx",
-                                                lineNumber: 523,
-                                                columnNumber: 37
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                                                value: dietPreferences.medicalConditions,
-                                                onChange: (e)=>setDietPreferences({
-                                                        ...dietPreferences,
-                                                        medicalConditions: e.target.value
-                                                    }),
-                                                placeholder: "e.g., Diabetes, Hypertension, Thyroid issues...",
-                                                className: "w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none",
-                                                rows: 3
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/components/HealthResults.tsx",
-                                                lineNumber: 526,
-                                                columnNumber: 37
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 522,
-                                        columnNumber: 33
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/app/components/HealthResults.tsx",
-                                lineNumber: 449,
-                                columnNumber: 29
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex gap-4 mt-8",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: closeDietDialog,
-                                        className: "flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors",
-                                        children: "Cancel"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 541,
-                                        columnNumber: 33
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: handleDietFormSubmit,
-                                        className: "flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold",
-                                        children: "Generate Diet Plan"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 547,
-                                        columnNumber: 33
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/app/components/HealthResults.tsx",
-                                lineNumber: 540,
-                                columnNumber: 29
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/app/components/HealthResults.tsx",
-                        lineNumber: 431,
-                        columnNumber: 25
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/app/components/HealthResults.tsx",
-                    lineNumber: 430,
-                    columnNumber: 21
-                }, this),
-                (isLoadingDietPlan || showDownloadComplete) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "bg-white rounded-2xl p-8 max-w-sm w-full mx-4 shadow-2xl",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: closeModal,
-                                className: "absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                    className: "w-5 h-5"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/HealthResults.tsx",
-                                    lineNumber: 567,
-                                    columnNumber: 33
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/app/components/HealthResults.tsx",
-                                lineNumber: 563,
-                                columnNumber: 29
-                            }, this),
-                            isLoadingDietPlan && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-center",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-16 h-16 mx-auto mb-4 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 573,
+                                        lineNumber: 640,
                                         columnNumber: 37
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-xl font-semibold text-gray-800 mb-2",
-                                        children: "Generating Diet Plan"
+                                        className: "text-xl sm:text-2xl font-bold text-gray-800 mb-3",
+                                        children: "Creating Your Diet Plan"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 575,
+                                        lineNumber: 651,
                                         columnNumber: 37
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-600 mb-4",
-                                        children: "Please wait while we create your personalized diet plan..."
+                                        className: "text-gray-600 mb-6 text-sm sm:text-base",
+                                        children: "Our AI is analyzing your preferences and health data..."
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 578,
+                                        lineNumber: 654,
                                         columnNumber: 37
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-full bg-gray-200 rounded-full h-2",
+                                        className: "w-full bg-gray-200 rounded-full h-3 overflow-hidden",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-blue-600 h-2 rounded-full animate-pulse",
+                                            className: "h-full bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full animate-pulse transition-all duration-1000",
                                             style: {
-                                                width: '70%'
+                                                width: '75%'
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 584,
+                                            lineNumber: 660,
                                             columnNumber: 41
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 583,
-                                        columnNumber: 37
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/app/components/HealthResults.tsx",
-                                lineNumber: 571,
-                                columnNumber: 33
-                            }, this),
-                            showDownloadComplete && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-center",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
-                                            className: "w-8 h-8 text-green-600"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 593,
-                                            columnNumber: 41
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 592,
-                                        columnNumber: 37
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-xl font-semibold text-gray-800 mb-2",
-                                        children: "Download Complete!"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 596,
-                                        columnNumber: 37
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-600 mb-4",
-                                        children: "Your personalized diet plan has been successfully downloaded."
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 599,
+                                        lineNumber: 659,
                                         columnNumber: 37
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center justify-center text-sm text-green-600",
+                                        className: "mt-4 text-xs text-gray-500 flex items-center justify-center",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__["Download"], {
-                                                className: "w-4 h-4 mr-1"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
+                                                className: "w-3 h-3 mr-1"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                                lineNumber: 604,
+                                                lineNumber: 664,
                                                 columnNumber: 41
                                             }, this),
-                                            "File saved to Downloads"
+                                            "Processing nutritional requirements"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                        lineNumber: 603,
+                                        lineNumber: 663,
                                         columnNumber: 37
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                lineNumber: 590,
+                                lineNumber: 638,
+                                columnNumber: 33
+                            }, this),
+                            showDownloadComplete && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "p-8 sm:p-12 text-center",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "relative mb-8",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-20 h-20 mx-auto bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center animate-bounce",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
+                                                    className: "w-10 h-10 text-white"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/components/HealthResults.tsx",
+                                                    lineNumber: 675,
+                                                    columnNumber: 45
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/HealthResults.tsx",
+                                                lineNumber: 674,
+                                                columnNumber: 41
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "absolute inset-0 w-20 h-20 mx-auto bg-green-400 rounded-full animate-ping opacity-20"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/HealthResults.tsx",
+                                                lineNumber: 677,
+                                                columnNumber: 41
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/components/HealthResults.tsx",
+                                        lineNumber: 673,
+                                        columnNumber: 37
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: "text-xl sm:text-2xl font-bold text-gray-800 mb-3",
+                                        children: "Success! 🎉"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/HealthResults.tsx",
+                                        lineNumber: 680,
+                                        columnNumber: 37
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-gray-600 mb-6 text-sm sm:text-base",
+                                        children: "Your personalized diet plan has been generated and downloaded successfully."
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/HealthResults.tsx",
+                                        lineNumber: 683,
+                                        columnNumber: 37
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center justify-center text-sm text-emerald-600 bg-emerald-50 rounded-full py-2 px-4 inline-flex",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__["Download"], {
+                                                className: "w-4 h-4 mr-2"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/HealthResults.tsx",
+                                                lineNumber: 688,
+                                                columnNumber: 41
+                                            }, this),
+                                            "File saved to Downloads folder"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/components/HealthResults.tsx",
+                                        lineNumber: 687,
+                                        columnNumber: 37
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/components/HealthResults.tsx",
+                                lineNumber: 671,
                                 columnNumber: 33
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/HealthResults.tsx",
-                        lineNumber: 561,
+                        lineNumber: 629,
                         columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/components/HealthResults.tsx",
-                    lineNumber: 560,
+                    lineNumber: 628,
                     columnNumber: 21
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     ref: reportRef,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "grid md:grid-cols-3 gap-6",
+                            className: "grid grid-cols-1 md:grid-cols-3 gap-6",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: `rounded-2xl p-6 shadow-lg bg-gradient-to-br ${getBMIBgColor(results.bmi.value)}`,
+                                    className: `rounded-2xl p-6 shadow-lg bg-gradient-to-br ${getBMIBgColor(results.bmi.value)} transform hover:scale-105 transition-all duration-300`,
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex items-center justify-between",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "bg-white p-2 rounded-xl",
+                                                    className: "bg-white p-2 rounded-xl shadow-sm",
                                                     children: getBMIIcon(results.bmi.value)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                                    lineNumber: 620,
+                                                    lineNumber: 704,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1701,7 +1899,7 @@ function HealthResults({ results }) {
                                                             children: "BMI"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                                            lineNumber: 622,
+                                                            lineNumber: 706,
                                                             columnNumber: 37
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1709,19 +1907,19 @@ function HealthResults({ results }) {
                                                             children: "Body Mass Index"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                                            lineNumber: 623,
+                                                            lineNumber: 707,
                                                             columnNumber: 37
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                                    lineNumber: 621,
+                                                    lineNumber: 705,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 619,
+                                            lineNumber: 703,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1729,7 +1927,7 @@ function HealthResults({ results }) {
                                             children: results.bmi.value.toFixed(1)
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 626,
+                                            lineNumber: 710,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1737,33 +1935,33 @@ function HealthResults({ results }) {
                                             children: results.bmi.interpretation
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 629,
+                                            lineNumber: 713,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                    lineNumber: 618,
+                                    lineNumber: 702,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "rounded-2xl p-6 shadow-lg bg-gradient-to-br from-purple-100 to-purple-200",
+                                    className: "rounded-2xl p-6 shadow-lg bg-gradient-to-br from-purple-100 to-purple-200 transform hover:scale-105 transition-all duration-300",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex items-center justify-between",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "bg-white p-2 rounded-xl",
+                                                    className: "bg-white p-2 rounded-xl shadow-sm",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$activity$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Activity$3e$__["Activity"], {
                                                         className: "text-purple-600 w-6 h-6"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                        lineNumber: 638,
+                                                        lineNumber: 722,
                                                         columnNumber: 37
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                                    lineNumber: 637,
+                                                    lineNumber: 721,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1774,7 +1972,7 @@ function HealthResults({ results }) {
                                                             children: "BMR"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                                            lineNumber: 641,
+                                                            lineNumber: 725,
                                                             columnNumber: 37
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1782,19 +1980,19 @@ function HealthResults({ results }) {
                                                             children: "Basal Metabolic Rate"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                                            lineNumber: 642,
+                                                            lineNumber: 726,
                                                             columnNumber: 37
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                                    lineNumber: 640,
+                                                    lineNumber: 724,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 636,
+                                            lineNumber: 720,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1805,7 +2003,7 @@ function HealthResults({ results }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 645,
+                                            lineNumber: 729,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1813,33 +2011,33 @@ function HealthResults({ results }) {
                                             children: "at rest daily"
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 648,
+                                            lineNumber: 732,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                    lineNumber: 635,
+                                    lineNumber: 719,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "rounded-2xl p-6 shadow-lg bg-gradient-to-br from-orange-100 to-orange-200",
+                                    className: "rounded-2xl p-6 shadow-lg bg-gradient-to-br from-orange-100 to-orange-200 transform hover:scale-105 transition-all duration-300",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex items-center justify-between",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "bg-white p-2 rounded-xl",
+                                                    className: "bg-white p-2 rounded-xl shadow-sm",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$target$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Target$3e$__["Target"], {
                                                         className: "text-orange-600 w-6 h-6"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                        lineNumber: 655,
+                                                        lineNumber: 739,
                                                         columnNumber: 37
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                                    lineNumber: 654,
+                                                    lineNumber: 738,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1850,7 +2048,7 @@ function HealthResults({ results }) {
                                                             children: "Calorie Need"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                                            lineNumber: 658,
+                                                            lineNumber: 742,
                                                             columnNumber: 37
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1858,19 +2056,19 @@ function HealthResults({ results }) {
                                                             children: "Daily Total"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                                            lineNumber: 659,
+                                                            lineNumber: 743,
                                                             columnNumber: 37
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                                    lineNumber: 657,
+                                                    lineNumber: 741,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 653,
+                                            lineNumber: 737,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1881,7 +2079,7 @@ function HealthResults({ results }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 662,
+                                            lineNumber: 746,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1889,54 +2087,54 @@ function HealthResults({ results }) {
                                             children: "estimated intake"
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 665,
+                                            lineNumber: 749,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                    lineNumber: 652,
+                                    lineNumber: 736,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/HealthResults.tsx",
-                            lineNumber: 616,
+                            lineNumber: 700,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mt-10",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "bg-gradient-to-r from-blue-600 to-emerald-600 px-8 py-6",
+                                    className: "bg-gradient-to-r from-blue-600 to-emerald-600 px-6 sm:px-8 py-6",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                            className: "text-2xl font-bold text-white",
+                                            className: "text-xl sm:text-2xl font-bold text-white",
                                             children: "Personalized Recommendations"
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 672,
+                                            lineNumber: 756,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-blue-100 mt-1",
+                                            className: "text-blue-100 mt-1 text-sm sm:text-base",
                                             children: "Tailored health guidance for your wellness journey"
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 675,
+                                            lineNumber: 759,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                    lineNumber: 671,
+                                    lineNumber: 755,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "p-8",
+                                    className: "p-6 sm:p-8",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "grid md:grid-cols-2 gap-12",
+                                            className: "grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "space-y-6",
@@ -1952,26 +2150,26 @@ function HealthResults({ results }) {
                                                                             children: "1"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                                                            lineNumber: 687,
+                                                                            lineNumber: 771,
                                                                             columnNumber: 57
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                                        lineNumber: 686,
+                                                                        lineNumber: 770,
                                                                         columnNumber: 53
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                                        className: "text-xl font-bold text-gray-800",
+                                                                        className: "text-lg sm:text-xl font-bold text-gray-800",
                                                                         children: rec.replace(/^[-•\d.]+\s*/, '').replace(/\*+/g, '')
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                                        lineNumber: 689,
+                                                                        lineNumber: 773,
                                                                         columnNumber: 53
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                                                lineNumber: 685,
+                                                                lineNumber: 769,
                                                                 columnNumber: 49
                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "flex items-start gap-4 group hover:bg-gray-50 rounded-lg p-3 transition-colors",
@@ -1981,31 +2179,31 @@ function HealthResults({ results }) {
                                                                         children: idx
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                                        lineNumber: 695,
+                                                                        lineNumber: 779,
                                                                         columnNumber: 53
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                        className: "text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors",
+                                                                        className: "text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors text-sm sm:text-base",
                                                                         children: rec.replace(/^[-•\d.]+\s*/, '')
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                                        lineNumber: 698,
+                                                                        lineNumber: 782,
                                                                         columnNumber: 53
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                                                lineNumber: 694,
+                                                                lineNumber: 778,
                                                                 columnNumber: 49
                                                             }, this)
                                                         }, idx, false, {
                                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                                            lineNumber: 683,
+                                                            lineNumber: 767,
                                                             columnNumber: 41
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                                    lineNumber: 681,
+                                                    lineNumber: 765,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2022,26 +2220,26 @@ function HealthResults({ results }) {
                                                                             children: "2"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                                                            lineNumber: 714,
+                                                                            lineNumber: 798,
                                                                             columnNumber: 57
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                                        lineNumber: 713,
+                                                                        lineNumber: 797,
                                                                         columnNumber: 53
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                                        className: "text-xl font-bold text-gray-800",
+                                                                        className: "text-lg sm:text-xl font-bold text-gray-800",
                                                                         children: rec.replace(/^[-•\d.]+\s*/, '').replace(/\*+/g, '')
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                                        lineNumber: 716,
+                                                                        lineNumber: 800,
                                                                         columnNumber: 53
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                                                lineNumber: 712,
+                                                                lineNumber: 796,
                                                                 columnNumber: 49
                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "flex items-start gap-4 group hover:bg-gray-50 rounded-lg p-3 transition-colors",
@@ -2051,37 +2249,37 @@ function HealthResults({ results }) {
                                                                         children: idx
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                                        lineNumber: 722,
+                                                                        lineNumber: 806,
                                                                         columnNumber: 53
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                        className: "text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors",
+                                                                        className: "text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors text-sm sm:text-base",
                                                                         children: rec.replace(/^[-•\d.]+\s*/, '')
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                                        lineNumber: 725,
+                                                                        lineNumber: 809,
                                                                         columnNumber: 53
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                                                lineNumber: 721,
+                                                                lineNumber: 805,
                                                                 columnNumber: 49
                                                             }, this)
                                                         }, idx + 4, false, {
                                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                                            lineNumber: 710,
+                                                            lineNumber: 794,
                                                             columnNumber: 41
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                                    lineNumber: 708,
+                                                    lineNumber: 792,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 679,
+                                            lineNumber: 763,
                                             columnNumber: 29
                                         }, this),
                                         extraRecommendations.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2100,12 +2298,12 @@ function HealthResults({ results }) {
                                                                         children: "3"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                                        lineNumber: 744,
+                                                                        lineNumber: 828,
                                                                         columnNumber: 61
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                                                    lineNumber: 743,
+                                                                    lineNumber: 827,
                                                                     columnNumber: 57
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2113,18 +2311,18 @@ function HealthResults({ results }) {
                                                                     children: rec.replace(/^[-•\d.]+\s*/, '').replace(/\*+/g, '')
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                                                    lineNumber: 746,
+                                                                    lineNumber: 830,
                                                                     columnNumber: 57
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                                            lineNumber: 742,
+                                                            lineNumber: 826,
                                                             columnNumber: 53
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                        lineNumber: 741,
+                                                        lineNumber: 825,
                                                         columnNumber: 49
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "flex items-start gap-4 group hover:bg-gray-50 rounded-lg p-3 transition-colors",
@@ -2134,7 +2332,7 @@ function HealthResults({ results }) {
                                                                 children: idx
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                                                lineNumber: 753,
+                                                                lineNumber: 837,
                                                                 columnNumber: 53
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2142,23 +2340,23 @@ function HealthResults({ results }) {
                                                                 children: rec.replace(/^[-•\d.]+\s*/, '')
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                                                lineNumber: 756,
+                                                                lineNumber: 840,
                                                                 columnNumber: 53
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                        lineNumber: 752,
+                                                        lineNumber: 836,
                                                         columnNumber: 49
                                                     }, this)
                                                 }, idx, false, {
                                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                                    lineNumber: 739,
+                                                    lineNumber: 823,
                                                     columnNumber: 41
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 737,
+                                            lineNumber: 821,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2170,7 +2368,7 @@ function HealthResults({ results }) {
                                                         className: "w-4 h-4 mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/HealthResults.tsx",
-                                                        lineNumber: 769,
+                                                        lineNumber: 853,
                                                         columnNumber: 37
                                                     }, this),
                                                     "Generated on ",
@@ -2178,45 +2376,45 @@ function HealthResults({ results }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/HealthResults.tsx",
-                                                lineNumber: 768,
+                                                lineNumber: 852,
                                                 columnNumber: 33
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/HealthResults.tsx",
-                                            lineNumber: 767,
+                                            lineNumber: 851,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/HealthResults.tsx",
-                                    lineNumber: 678,
+                                    lineNumber: 762,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/HealthResults.tsx",
-                            lineNumber: 670,
+                            lineNumber: 754,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/HealthResults.tsx",
-                    lineNumber: 614,
+                    lineNumber: 698,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/components/HealthResults.tsx",
-            lineNumber: 400,
+            lineNumber: 424,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/components/HealthResults.tsx",
-        lineNumber: 399,
+        lineNumber: 423,
         columnNumber: 9
     }, this);
 }
-_s(HealthResults, "bd0GuNt/H+J6lKqvL7GGib3Srgo=");
+_s(HealthResults, "04mP1p9kvl8htiPH76Y0gqE5RQU=");
 _c = HealthResults;
 var _c;
 __turbopack_context__.k.register(_c, "HealthResults");
