@@ -108,7 +108,7 @@ export default function HealthForm({ setResults }: HealthFormProps) {
                     bmi: result.bmi,
                     bmr: result.bmr,
                     calorieNeeds: result.calorieNeeds,
-                    recommendations: result.recommendations || [] // Ensure recommendations are included
+                    recommendations: result.recommendations || []
                 };
 
                 // Save the complete results to localStorage for persistence

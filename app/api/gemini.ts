@@ -115,8 +115,6 @@ export async function callDietAi(payload: HealthPayload): Promise<string> {
   
   Add a list of foods to avoid and foods to prioritize.
   
-  Suggest hydration tips and supplements if necessary.
-  
   Recommend how often the user should review or adjust their diet.
   
   Provide the plan in a clean and easy-to-read format, suitable for users with no nutrition background.

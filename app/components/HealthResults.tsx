@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import jsPDF from "jspdf";
 import {
-    Heart,
     Activity,
     Target,
     TrendingUp,
@@ -12,16 +11,21 @@ import {
     Calendar,
     User
 } from 'lucide-react';
+import { GenerateDietPlanPdf } from "../api/types";
+
+type ActivityLevel = 'sedentary' | 'lightly' | 'moderately' | 'very';
 
 interface HealthResultsProps {
     results: {
         name: string;
+        age: number;
         weight: number;
         height: number;
         gender: string;
         bmi: { value: number; interpretation: string };
         bmr: number;
         calorieNeeds: number;
+        activityLevel: ActivityLevel;
         recommendations: string[];
     };
     onClose?: () => void;
@@ -306,9 +310,6 @@ export default function HealthResults({ results }: HealthResultsProps) {
             <div className="max-w-4xl mx-auto space-y-8">
                 {/* Header */}
                 <div className="text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500">
-                        <Heart className="text-white w-8 h-8" />
-                    </div>
                     <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 mt-4">
                         Health Report Summary
                     </h1>
@@ -318,21 +319,38 @@ export default function HealthResults({ results }: HealthResultsProps) {
                 </div>
 
                 {/* Download PDF button */}
-                <div className="flex justify-center mb-6">
+                <div className="flex justify-center mb-6 gap-2 sm:gap-8 ">
                     <button
                         onClick={handleDownloadPdf}
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition"
+                        className="bg-blue-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition"
                     >
                         Download PDF
+                    </button>
+                    <button
+                        onClick={() => GenerateDietPlanPdf({
+                            age: results.age,
+                            gender: results.gender,
+                            height: results.height,
+                            weight: results.weight,
+                            bmi: results.bmi,
+                            bmr: results.bmr,
+                            calorieNeeds: results.calorieNeeds,
+                            activityLevel: results.activityLevel,
+                            healthConditions: results.recommendations ? results.recommendations.join(', ') : ''
+
+                        })}
+                        className="bg-red-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition"
+                    >
+                        Full Diet Plan
                     </button>
                 </div>
 
                 {/* Wrap the entire report content inside this ref */}
-                <div ref={reportRef}>
+                < div ref={reportRef} >
                     {/* Health Metrics Cards */}
-                    <div className="grid md:grid-cols-3 gap-6">
+                    < div className="grid md:grid-cols-3 gap-6" >
                         {/* BMI */}
-                        <div className={`rounded-2xl p-6 shadow-lg bg-gradient-to-br ${getBMIBgColor(results.bmi.value)}`}>
+                        < div className={`rounded-2xl p-6 shadow-lg bg-gradient-to-br ${getBMIBgColor(results.bmi.value)}`}>
                             <div className="flex items-center justify-between">
                                 <div className="bg-white p-2 rounded-xl">{getBMIIcon(results.bmi.value)}</div>
                                 <div className="text-right">
@@ -490,7 +508,7 @@ export default function HealthResults({ results }: HealthResultsProps) {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }
