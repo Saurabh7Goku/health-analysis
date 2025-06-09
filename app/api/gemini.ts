@@ -84,6 +84,8 @@ export async function callDietAi(payload: HealthPayload): Promise<string> {
   Calorie Needs: ${payload.calorieNeeds.toFixed(0)} kcal/day
   
   Activity Level: ${payload.activityLevel}
+
+  ${payload.healthConditions ? `Health Conditions: ${payload.healthConditions}` : ''}
   
   Instructions:
   
