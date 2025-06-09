@@ -4,7 +4,19 @@ import { callDietAi } from "../gemini";
 export async function POST(request: Request) {
     console.log('API /dietplan called', new Date().toISOString());
     const data = await request.json();
-    const { name, age, gender, height, weight, activityLevel, healthConditions } = data;
+    const {
+      name,
+      age,
+      gender,
+      height,
+      weight,
+      activityLevel,
+      healthConditions,
+      dietType,
+      micronutrientDeficiency,
+      allergies,
+      medicalConditions
+  } = data;
   
     // Calculate BMI
     const heightInMeters = height / 100;
@@ -42,13 +54,14 @@ export async function POST(request: Request) {
       bmr,
       calorieNeeds,
       healthConditions,
+      dietType,
+      micronutrientDeficiency,
+      allergies,
+      medicalConditions
     };
   
     // Call the diet AI function to get the diet plan text
     const dietPlanText = await callDietAi(payload);
-  
-    // Optionally, parse dietPlanText if it has structured points or headings
-    // For now, send raw text or split into lines if needed
   
     return NextResponse.json({
       name,
@@ -58,7 +71,7 @@ export async function POST(request: Request) {
       bmi: { value: bmi, interpretation: bmiInterpretation },
       bmr,
       calorieNeeds,
-      dietPlan: dietPlanText,  // send full diet plan text
+      dietPlan: dietPlanText, 
     });
   }
   

@@ -1,17 +1,4 @@
-export interface HealthPayload {
-  age: number;
-  gender: string;
-  height: number;
-  weight: number;
-  activityLevel: string;
-  bmi: {
-    value: number;
-    interpretation: string;
-  };
-  bmr: number;
-  calorieNeeds: number;
-  healthConditions?: string;
-}
+import { HealthPayload } from "./types";
 
 export async function callGemini(payload: HealthPayload): Promise<string> {
   const prompt = `
@@ -54,7 +41,7 @@ Activity Level: ${payload.activityLevel}
       }),
     }
   );
-  console.log("callGemini → healthConditions:", payload.healthConditions);
+  // console.log("callGemini → healthConditions:", payload.healthConditions);
   
   const data = await res.json();
 
@@ -63,8 +50,10 @@ Activity Level: ${payload.activityLevel}
 
 
 export async function callDietAi(payload: HealthPayload): Promise<string> {
+  console.log('Payload:', payload);
+
   const prompt = `You are a certified nutritionist AI. Based on the following physical and lifestyle information, 
-  generate a personalized, structured, and goal-oriented diet plan for the Both types of user(Veg & Non-Veg). The diet should be realistic, sustainable, 
+  generate a personalized, structured, and goal-oriented diet plan for Diet Type : ${payload.dietType}. The diet should be realistic, sustainable, 
   and aimed at optimizing their health.
 
   User Details:
@@ -80,12 +69,13 @@ export async function callDietAi(payload: HealthPayload): Promise<string> {
   BMI: ${payload.bmi.value.toFixed(1)} (${payload.bmi.interpretation})
   
   BMR: ${payload.bmr.toFixed(0)} kcal/day
-  
-  Calorie Needs: ${payload.calorieNeeds.toFixed(0)} kcal/day
-  
-  Activity Level: ${payload.activityLevel}
+
+  Activity Level : ${payload.activityLevel}
 
   ${payload.healthConditions ? `Health Conditions: ${payload.healthConditions}` : ''}
+  ${payload.micronutrientDeficiency ? `Health Conditions: ${payload.micronutrientDeficiency}` : ''}
+  ${payload.allergies ? `Health Conditions: ${payload.allergies}` : ''}
+  ${payload.medicalConditions ? `Health Conditions: ${payload.medicalConditions}` : ''}  
   
   Instructions:
   
@@ -96,8 +86,6 @@ export async function callDietAi(payload: HealthPayload): Promise<string> {
   Provide a structured meal plan:
   
   Breakfast
-  
-  Mid-morning snack
   
   Lunch
   
@@ -118,6 +106,9 @@ export async function callDietAi(payload: HealthPayload): Promise<string> {
   Recommend how often the user should review or adjust their diet.
   
   Provide the plan in a clean and easy-to-read format, suitable for users with no nutrition background.
+
+  At last Provide a well structured Micro Nutrients(with %value of total Value from diet) table using row column (no lines) wth proper padding
+  and segmentation for provided Diet Plan.
 `
 
   const apiKey = process.env.GEMINI_API_KEY;
@@ -141,5 +132,7 @@ export async function callDietAi(payload: HealthPayload): Promise<string> {
     }
   );
   const data = await res.json();
+  console.log('Diet Plan: '+payload.dietType)
+  console.log('Diet Plan: '+payload.micronutrientDeficiency)
   return data?.candidates?.[0]?.content?.parts?.[0]?.text || "• Unable to generate recommendations.";
 }

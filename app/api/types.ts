@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { HealthPayload} from './gemini';
 import jsPDF from 'jspdf';
 
 // types.ts
@@ -44,6 +43,28 @@ export interface HealthResults {
     setResults: React.Dispatch<React.SetStateAction<HealthResults | null>>;
   }
 
+  export interface HealthPayload {
+    name: string
+    age: number;
+    gender: string;
+    height: number;
+    weight: number;
+    activityLevel: string;
+    bmi: {
+      value: number;
+      interpretation: string;
+    };
+    bmr: number;
+    calorieNeeds: number;
+    healthConditions?: string;
+  
+    // For Diet Planner Only
+    dietType: string; 
+    micronutrientDeficiency: string; 
+    allergies: string; 
+    medicalConditions: string;
+  }
+
   async function fetchDietPlan(payload: HealthPayload): Promise<string> {
     const response = await fetch('/api/diet', {
       method: 'POST',
@@ -62,6 +83,7 @@ export interface HealthResults {
   export const GenerateDietPlanPdf = async (payload: HealthPayload) => {
     try {
       const response = await fetchDietPlan(payload);
+      console.log('Generate pdf: '+ payload)
   
       if (!response || typeof response !== "string") {
         console.error("❌ Invalid response from fetchDietPlan:", response);

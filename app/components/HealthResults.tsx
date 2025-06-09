@@ -16,6 +16,14 @@ import {
 import { GenerateDietPlanPdf } from "../api/types";
 
 type ActivityLevel = 'sedentary' | 'lightly' | 'moderately' | 'very';
+type DietType = 'vegetarian' | 'non-vegetarian' | '';
+
+interface DietPreferences {
+    dietType: DietType;
+    micronutrientDeficiency: string;
+    allergies: string;
+    medicalConditions: string;
+}
 
 interface HealthResultsProps {
     results: {
@@ -36,6 +44,13 @@ interface HealthResultsProps {
 export default function HealthResults({ results }: HealthResultsProps) {
     const [isLoadingDietPlan, setIsLoadingDietPlan] = useState(false);
     const [showDownloadComplete, setShowDownloadComplete] = useState(false);
+    const [showDietDialog, setShowDietDialog] = useState(false);
+    const [dietPreferences, setDietPreferences] = useState({
+        dietType: '',
+        micronutrientDeficiency: '',
+        allergies: '',
+        medicalConditions: ''
+    });
 
     const getBMIColor = (bmi: number) => {
         if (bmi < 18.5) return 'text-blue-600';
@@ -311,11 +326,23 @@ export default function HealthResults({ results }: HealthResultsProps) {
     };
 
     const handleDietPlanDownload = async () => {
+        // Show the dialog first
+        setShowDietDialog(true);
+    };
+
+    const handleDietFormSubmit = async () => {
+        // Validate required fields
+        if (!dietPreferences.dietType) {
+            alert('Please select your diet type (Vegetarian or Non-Vegetarian)');
+            return;
+        }
+        setShowDietDialog(false);
         setIsLoadingDietPlan(true);
         setShowDownloadComplete(false);
 
         try {
-            await GenerateDietPlanPdf({
+            const payload = {
+                name: results.name,
                 age: results.age,
                 gender: results.gender,
                 height: results.height,
@@ -324,8 +351,13 @@ export default function HealthResults({ results }: HealthResultsProps) {
                 bmr: results.bmr,
                 calorieNeeds: results.calorieNeeds,
                 activityLevel: results.activityLevel,
-                healthConditions: results.recommendations ? results.recommendations.join(', ') : ''
-            });
+                healthConditions: results.recommendations ? results.recommendations.join(', ') : '',
+                dietType: dietPreferences.dietType,
+                micronutrientDeficiency: dietPreferences.micronutrientDeficiency,
+                allergies: dietPreferences.allergies,
+                medicalConditions: dietPreferences.medicalConditions
+            };
+            await GenerateDietPlanPdf(payload);
 
             // Simulate download completion
             setTimeout(() => {
@@ -343,6 +375,17 @@ export default function HealthResults({ results }: HealthResultsProps) {
             setIsLoadingDietPlan(false);
             alert('Failed to generate diet plan. Please try again.');
         }
+    };
+
+    const closeDietDialog = () => {
+        setShowDietDialog(false);
+        // Reset form
+        setDietPreferences({
+            dietType: '',
+            micronutrientDeficiency: '',
+            allergies: '',
+            medicalConditions: ''
+        });
     };
 
     const closeModal = () => {
@@ -379,6 +422,136 @@ export default function HealthResults({ results }: HealthResultsProps) {
                         {isLoadingDietPlan ? 'Generating...' : 'Full Diet Plan'}
                     </button>
                 </div>
+
+                {/* Diet Plan Questionnaire Dialog */}
+                {showDietDialog && (
+                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl max-h-[90vh] overflow-y-auto">
+                            {/* Close button */}
+                            <button
+                                onClick={closeDietDialog}
+                                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+
+                            <div className="text-center mb-6">
+                                <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                                    Diet Plan Preferences
+                                </h3>
+                                <p className="text-gray-600">
+                                    Help us create a personalized diet plan for you
+                                </p>
+                            </div>
+
+                            <div className="space-y-6">
+                                {/* Diet Type */}
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-3">
+                                        1. Are you Vegetarian or Non-Vegetarian? *
+                                    </label>
+                                    <div className="space-y-2">
+                                        <label className="flex items-center">
+                                            <input
+                                                type="radio"
+                                                name="dietType"
+                                                value="vegetarian"
+                                                checked={dietPreferences.dietType === 'vegetarian'}
+                                                onChange={(e) => setDietPreferences({
+                                                    ...dietPreferences,
+                                                    dietType: e.target.value
+                                                })}
+                                                className="w-4 h-4 text-green-600 focus:ring-green-500"
+                                            />
+                                            <span className="ml-2 text-gray-700">Vegetarian</span>
+                                        </label>
+                                        <label className="flex items-center">
+                                            <input
+                                                type="radio"
+                                                name="dietType"
+                                                value="non-vegetarian"
+                                                checked={dietPreferences.dietType === 'non-vegetarian'}
+                                                onChange={(e) => setDietPreferences({
+                                                    ...dietPreferences,
+                                                    dietType: e.target.value
+                                                })}
+                                                className="w-4 h-4 text-green-600 focus:ring-green-500"
+                                            />
+                                            <span className="ml-2 text-gray-700">Non-Vegetarian</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                {/* Micronutrient Deficiency */}
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-3">
+                                        2. Do you have any micronutrient deficiencies?
+                                    </label>
+                                    <textarea
+                                        value={dietPreferences.micronutrientDeficiency}
+                                        onChange={(e) => setDietPreferences({
+                                            ...dietPreferences,
+                                            micronutrientDeficiency: e.target.value
+                                        })}
+                                        placeholder="e.g., Vitamin D, Iron, B12, Calcium deficiency..."
+                                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+                                        rows={3}
+                                    />
+                                </div>
+
+                                {/* Allergies */}
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-3">
+                                        3. Do you have any food allergies or intolerances?
+                                    </label>
+                                    <textarea
+                                        value={dietPreferences.allergies}
+                                        onChange={(e) => setDietPreferences({
+                                            ...dietPreferences,
+                                            allergies: e.target.value
+                                        })}
+                                        placeholder="e.g., Nuts, Dairy, Gluten, Shellfish..."
+                                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+                                        rows={3}
+                                    />
+                                </div>
+
+                                {/* Medical Conditions */}
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-3">
+                                        4. Any specific medical conditions we should consider?
+                                    </label>
+                                    <textarea
+                                        value={dietPreferences.medicalConditions}
+                                        onChange={(e) => setDietPreferences({
+                                            ...dietPreferences,
+                                            medicalConditions: e.target.value
+                                        })}
+                                        placeholder="e.g., Diabetes, Hypertension, Thyroid issues..."
+                                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+                                        rows={3}
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Form Buttons */}
+                            <div className="flex gap-4 mt-8">
+                                <button
+                                    onClick={closeDietDialog}
+                                    className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    onClick={handleDietFormSubmit}
+                                    className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold"
+                                >
+                                    Generate Diet Plan
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
 
                 {/* Loading/Success Modal */}
                 {(isLoadingDietPlan || showDownloadComplete) && (
