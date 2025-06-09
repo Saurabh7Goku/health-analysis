@@ -7,12 +7,14 @@ import { Heart, Stethoscope, Activity, Shield, Users, TrendingUp, AlertTriangle,
 
 export interface HealthResults {
   name: string;
+  age: number;
   weight: number;
   height: number;
   gender: string;
   bmi: { value: number; interpretation: string };
   bmr: number;
   calorieNeeds: number;
+  activityLevel: 'sedentary' | 'lightly' | 'moderately' | 'very';
   recommendations: string[];
 }
 

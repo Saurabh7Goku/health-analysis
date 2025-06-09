@@ -114,7 +114,7 @@ Activity Level: ${payload.activityLevel}
 }
 async function callDietAi(payload) {
     const prompt = `You are a certified nutritionist AI. Based on the following physical and lifestyle information, 
-  generate a personalized, structured, and goal-oriented diet plan for the user. The diet should be realistic, sustainable, 
+  generate a personalized, structured, and goal-oriented diet plan for the Both types of user(Veg & Non-Veg). The diet should be realistic, sustainable, 
   and aimed at optimizing their health.
 
   User Details:
@@ -164,8 +164,6 @@ async function callDietAi(payload) {
   Balanced macro distribution (carbs, protein, fats)
   
   Add a list of foods to avoid and foods to prioritize.
-  
-  Suggest hydration tips and supplements if necessary.
   
   Recommend how often the user should review or adjust their diet.
   

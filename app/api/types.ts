@@ -2,19 +2,19 @@ import { z } from 'zod';
 import { HealthPayload} from './gemini';
 import jsPDF from 'jspdf';
 
+// types.ts
 export interface HealthResults {
-    name: string;
-    weight: number;
-    height: number;
-    gender: string;
-    bmi: {
-      value: number;
-      interpretation: string;
-    };
-    bmr: number;
-    calorieNeeds: number;
-    recommendations: string[];
-  }
+  name: string;
+  age: number;
+  weight: number;
+  height: number;
+  gender: string;
+  bmi: { value: number; interpretation: string };
+  bmr: number;
+  calorieNeeds: number;
+  activityLevel: 'sedentary' | 'lightly' | 'moderately' | 'very';
+  recommendations: string[];
+}
   
   export const schema = z.object({
     name: z.string().min(1, 'Name is required'),

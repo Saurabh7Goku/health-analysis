@@ -101,14 +101,16 @@ export default function HealthForm({ setResults }: HealthFormProps) {
 
                 // Create the complete results object with recommendations
                 const completeResults: HealthResults = {
-                    name: result.name,
-                    weight: result.weight,
-                    height: result.height,
-                    gender: result.gender,
+                    name: data.name,
+                    age: data.age,
+                    weight: data.weight,
+                    height: data.height,
+                    gender: data.gender,
                     bmi: result.bmi,
                     bmr: result.bmr,
                     calorieNeeds: result.calorieNeeds,
-                    recommendations: result.recommendations || []
+                    activityLevel: data.activityLevel,
+                    recommendations: result.recommendations || [],
                 };
 
                 // Save the complete results to localStorage for persistence
