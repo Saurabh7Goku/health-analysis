@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { HealthPayload, callDietAi } from './gemini';
+import { HealthPayload} from './gemini';
 import jsPDF from 'jspdf';
 
 export interface HealthResults {
@@ -81,7 +81,7 @@ export interface HealthResults {
       };
       
       const contentWidth = pageWidth - margins.left - margins.right;
-      const contentHeight = pageHeight - margins.top - margins.bottom;
+      // const contentHeight = pageHeight - margins.top - margins.bottom;
       
       let y = margins.top;
       const lineHeight = 7;
