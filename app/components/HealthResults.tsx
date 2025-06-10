@@ -14,7 +14,6 @@ import {
     Shield,
     Sparkles,
     Clock,
-    Heart,
 } from 'lucide-react';
 import jsPDF from "jspdf";
 import { GenerateDietPlanPdf } from "../api/types";
