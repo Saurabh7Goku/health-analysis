@@ -322,7 +322,7 @@ export interface HealthResults {
       };
   
       // Add document title
-      addHeader("Personalized Diet Plan");
+      addHeader(`Personalized Diet Plan`);
       
       // Add generation date
       const currentDate = new Date().toLocaleDateString('en-US', {
@@ -335,6 +335,7 @@ export interface HealthResults {
       pdf.setFontSize(10);
       pdf.setTextColor(...colors.lightText);
       pdf.text(`Generated on: ${currentDate}`, margins.left, y);
+      pdf.text(payload.name, pageWidth - margins.right, y, { align: "right" });
       y += 15;
       
       // Process content

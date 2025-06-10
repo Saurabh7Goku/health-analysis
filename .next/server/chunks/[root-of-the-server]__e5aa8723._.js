@@ -169,8 +169,67 @@ async function callDietAi(payload) {
   
   Provide the plan in a clean and easy-to-read format, suitable for users with no nutrition background.
 
-  At last Provide a well structured Micro Nutrients(with %value of total Value from diet) table using row column (no lines) wth proper padding
-  and segmentation for provided Diet Plan.
+Prompt for Macros Table Creation:
+"Create a nutrition facts table in the style commonly found on the back of packaged food products. The table should include:
+Header Section:
+
+Product name
+Serving size (e.g., "1 cup (240ml)" or "30g")
+Servings per container
+
+Main Nutrition Facts:
+
+Calories per serving
+Calories from fat (if applicable)
+
+Macronutrient Breakdown:
+
+Total Fat (g) with % Daily Value
+
+Saturated Fat (g)
+Trans Fat (g)
+
+
+Cholesterol (mg)
+Sodium (mg)
+Total Carbohydrates (g) with % Daily Value
+
+Dietary Fiber (g)
+Total Sugars (g)
+Added Sugars (g)
+
+
+Protein (g)
+
+Micronutrients (optional):
+
+Vitamin D, Calcium, Iron, Potassium
+Any other relevant vitamins/minerals
+
+Format Requirements:
+
+Use the standard FDA nutrition label format
+Include the distinctive black border and typography
+Show % Daily Values based on a 2,000 calorie diet
+Use proper spacing and alignment
+Include the footnote about daily values
+Create a nutrition facts table designed specifically for PDF documents with the following specifications:
+PDF-Friendly Formatting:
+
+Use clear, readable fonts (Arial, Helvetica, or Times New Roman)
+Font size minimum 10pt for body text, 12pt for headers
+High contrast black text on white background
+Clean table borders (1-2pt weight)
+Proper cell padding for readability
+
+Layout Specifications:
+
+Standard width: 2.5-3 inches (typical nutrition label size)
+Scalable design that maintains readability when printed
+Organized in clearly defined sections with appropriate spacing
+Bold headers and dividing lines between sections
+
+Please specify the product type (e.g., cereal, protein bar, yogurt) so I can provide realistic nutritional values.".
 `;
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
@@ -219,7 +278,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$gemini$2e$ts__
 async function POST(request) {
     console.log('API /calculate called', new Date().toISOString()); // Debug log
     const data = await request.json();
-    const { name, age, gender, height, weight, activityLevel, healthConditions } = data;
+    const { name, age, gender, height, weight, activityLevel, healthConditions, dietType, micronutrientDeficiency, allergies, medicalConditions } = data;
     const heightInMeters = height / 100;
     const bmi = weight / (heightInMeters * heightInMeters);
     let bmiInterpretation = '';
@@ -253,7 +312,11 @@ async function POST(request) {
         },
         bmr,
         calorieNeeds,
-        healthConditions
+        healthConditions,
+        dietType,
+        micronutrientDeficiency,
+        allergies,
+        medicalConditions
     };
     const text = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$api$2f$gemini$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["callGemini"])(payload);
     const recommendations = text.split('\n').filter((line)=>line.trim().startsWith('•') || line.trim().startsWith('-') || line.trim().startsWith('*')).map((line)=>line.replace(/^[-•*]\s*/, '').trim());

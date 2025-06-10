@@ -14,6 +14,7 @@ import {
     Shield,
     Sparkles,
     Clock,
+    Heart,
 } from 'lucide-react';
 import jsPDF from "jspdf";
 import { GenerateDietPlanPdf } from "../api/types";
@@ -387,7 +388,7 @@ export default function HealthResults({ results }: HealthResultsProps) {
                     clearInterval(progressInterval);
                     return 95;
                 }
-                const increment = Math.random() * 7 + 6; // Random between 2-8
+                const increment = Math.random() * 7 + 2; // Random between 2-8
                 return Math.min(prev + increment, 95);
             });
         }, 1000);
@@ -465,7 +466,7 @@ export default function HealthResults({ results }: HealthResultsProps) {
                         disabled={isLoadingDietPlan}
                         className="bg-red-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:transform-none"
                     >
-                        {/* <Heart className="w-4 h-4 inline mr-2" /> */}
+                        <Download className="w-4 h-4 inline mr-2" />
                         {isLoadingDietPlan ? 'Generating...' : 'Full Diet Plan'}
                     </button>
                 </div>
