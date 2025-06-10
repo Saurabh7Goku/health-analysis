@@ -384,9 +384,9 @@ export default function HealthResults({ results }: HealthResultsProps) {
         setLoadingProgress(0);
         const progressInterval = setInterval(() => {
             setLoadingProgress(prev => {
-                if (prev >= 95) {
+                if (prev >= 99) {
                     clearInterval(progressInterval);
-                    return 95;
+                    return 100;
                 }
                 const increment = Math.random() * 7 + 3; // Random between 2-8
                 return Math.min(prev + increment, 95);
