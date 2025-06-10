@@ -107,8 +107,8 @@ export async function callDietAi(payload: HealthPayload): Promise<string> {
   
   Provide the plan in a clean and easy-to-read format, suitable for users with no nutrition background.
 
-  At last Provide a well structured Micro Nutrients(with %value of total Value from diet) table using row column (no lines) wth proper padding
-  and segmentation for provided Diet Plan.
+  At last Provide a well structured Micro Nutrients(with %value of for every meal(lunch, dinner etc) separately) table using row column (no lines) wth proper padding
+  and segmentation for provided Diet Plan no need to provide macro for each food items.
 `
 
   const apiKey = process.env.GEMINI_API_KEY;
