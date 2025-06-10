@@ -388,7 +388,7 @@ export default function HealthResults({ results }: HealthResultsProps) {
                     clearInterval(progressInterval);
                     return 95;
                 }
-                const increment = Math.random() * 7 + 2; // Random between 2-8
+                const increment = Math.random() * 7 + 3; // Random between 2-8
                 return Math.min(prev + increment, 95);
             });
         }, 1000);
