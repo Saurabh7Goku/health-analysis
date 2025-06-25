@@ -169,67 +169,8 @@ async function callDietAi(payload) {
   
   Provide the plan in a clean and easy-to-read format, suitable for users with no nutrition background.
 
-Prompt for Macros Table Creation:
-"Create a nutrition facts table in the style commonly found on the back of packaged food products. The table should include:
-Header Section:
-
-Product name
-Serving size (e.g., "1 cup (240ml)" or "30g")
-Servings per container
-
-Main Nutrition Facts:
-
-Calories per serving
-Calories from fat (if applicable)
-
-Macronutrient Breakdown:
-
-Total Fat (g) with % Daily Value
-
-Saturated Fat (g)
-Trans Fat (g)
-
-
-Cholesterol (mg)
-Sodium (mg)
-Total Carbohydrates (g) with % Daily Value
-
-Dietary Fiber (g)
-Total Sugars (g)
-Added Sugars (g)
-
-
-Protein (g)
-
-Micronutrients (optional):
-
-Vitamin D, Calcium, Iron, Potassium
-Any other relevant vitamins/minerals
-
-Format Requirements:
-
-Use the standard FDA nutrition label format
-Include the distinctive black border and typography
-Show % Daily Values based on a 2,000 calorie diet
-Use proper spacing and alignment
-Include the footnote about daily values
-Create a nutrition facts table designed specifically for PDF documents with the following specifications:
-PDF-Friendly Formatting:
-
-Use clear, readable fonts (Arial, Helvetica, or Times New Roman)
-Font size minimum 10pt for body text, 12pt for headers
-High contrast black text on white background
-Clean table borders (1-2pt weight)
-Proper cell padding for readability
-
-Layout Specifications:
-
-Standard width: 2.5-3 inches (typical nutrition label size)
-Scalable design that maintains readability when printed
-Organized in clearly defined sections with appropriate spacing
-Bold headers and dividing lines between sections
-
-Please specify the product type (e.g., cereal, protein bar, yogurt) so I can provide realistic nutritional values.".
+  At last Provide a well structured Micro Nutrients(with %value of for every meal(lunch, dinner etc) separately) table using row column (no lines) wth proper padding
+  and segmentation for provided Diet Plan no need to provide macro for each food items.
 `;
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
